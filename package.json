@@ -1,0 +1,22 @@
+{
+  "name": "dadosedireitos",
+  "version": "1.0.0",
+  "description": "O objetivo deste material é auxiliar mães, pais, educadores e gestores escolares a entender melhor o contexto atual de uso da internet.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass --watch ./style/app.scss ./style/app.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitorpinho376/dadosedireitos.git"
+  },
+  "keywords": [
+  ],
+  "author": "Vitor Pinho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitorpinho376/dadosedireitos/issues"
+  },
+  "homepage": "https://github.com/vitorpinho376/dadosedireitos#readme"
+}
