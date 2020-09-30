@@ -1,5 +1,208 @@
+@charset "UTF-8";
 body {
   background-color: #000;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0;
+  font-size: 18px;
+}
+
+.heading {
+  font-size: 3.5em;
+}
+.heading.lg {
+  font-weight: 700;
+}
+.heading.md {
+  font-weight: 600;
+}
+.heading.sm {
+  font-weight: 400;
+}
+
+.body {
+  font-size: 1em;
+}
+.body.lg {
+  font-weight: 700;
+}
+.body.md {
+  font-weight: 600;
+}
+.body.sm {
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "dadosedireitos";
+  src: url("../icons/dadosedireitos.eot?fh515j");
+  src: url("../icons/dadosedireitos.eot?fh515j#iefix") format("embedded-opentype"), url("../icons/dadosedireitos.ttf?fh515j") format("truetype"), url("../icons/dadosedireitos.woff?fh515j") format("woff"), url("../icons/dadosedireitos.svg?fh515j#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "dadosedireitos" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-instagram:before {
+  content: "";
+}
+
+.icon-close:before {
+  content: "";
+}
+
+.icon-article:before {
+  content: "";
+}
+
+.icon-video:before {
+  content: "";
+}
+
+.icon-dark:before {
+  content: "";
+}
+
+.icon-zoomOut:before {
+  content: "";
+}
+
+.icon-zoomIn:before {
+  content: "";
+}
+
+.icon-grid:before {
+  content: "";
+}
+
+.icon-linkedin:before {
+  content: "";
+}
+
+.icon-facebook:before {
+  content: "";
+}
+
+.icon-arrow-bottom:before {
+  content: "";
+}
+
+.icon-arrow-left:before {
+  content: "";
+}
+
+.icon-arrow-up:before {
+  content: "";
+}
+
+.icon-arrow-right:before {
+  content: "";
+}
+
+.icon-menu:before {
+  content: "";
+}
+
+.icon-guia:before {
+  content: "";
+}
+
+.icon-light:before {
+  content: "";
+}
+
+.btn {
+  font-weight: 700;
+  border: 2px solid transparent;
+  border-radius: 8px;
+}
+.btn.lg {
+  line-height: 1.7em;
+  padding: 16px 24px;
+  font-size: 1.3em;
+}
+.btn.md {
+  line-height: 0.8em;
+  padding: 16px;
+  font-size: 1em;
+}
+.btn.btn-primary {
+  background-color: #F6D446;
+  color: #321F4A;
+}
+.btn.btn-outline {
+  color: #FFF;
+  border: 2px solid #FFF;
+}
+
+.neutral-header {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  padding-top: 40px;
+}
+.neutral-header .action-holder {
+  float: right;
+}
+.neutral-header .action-holder a {
+  margin-left: 16px;
+}
+
+.main-hero {
+  min-height: 100vh;
+  background: rgba(155, 81, 224, 0.8);
+  overflow: hidden;
+  position: relative;
+}
+.main-hero .hero-content {
+  margin-top: 20%;
+  color: #FFF;
+  max-width: 1000px;
+  padding-bottom: 40px;
+}
+.main-hero .hero-content .heading, .main-hero .hero-content .body {
+  margin: 24px 0;
+}
+.main-hero .hero-content .action-holder {
+  padding: 16px 0;
+}
+.main-hero .hero-content .action-holder a {
+  margin-right: 16px;
+}
+
+.main-hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("../img/hero-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1200px) {
+  body {
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

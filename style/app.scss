@@ -1,10 +1,240 @@
-//vars 
+//Global
 
 $accent: #F6D446;
 $primary: #9B51E0;
 $carbon: #321F4A;
 $positive: #27CD56;
+$white: #FFF;
 
 body {
     background-color: #000;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0;
+    font-size: 18px;
 }
+
+//Type
+
+.heading {
+
+    font-size: 3.5em;
+
+    &.lg {
+        font-weight: 700;
+    }
+
+    &.md {
+        font-weight: 600;
+    }
+
+    &.sm {
+        font-weight: 400;
+    }
+
+}
+
+.body {
+
+    font-size: 1em;
+
+    &.lg {
+        font-weight: 700;
+    }
+
+    &.md {
+        font-weight: 600;
+    }
+
+    &.sm {
+        font-weight: 400;
+    }
+
+}
+
+
+//icons
+
+@font-face {
+    font-family: 'dadosedireitos';
+    src:  url('../icons/dadosedireitos.eot?fh515j');
+    src:  url('../icons/dadosedireitos.eot?fh515j#iefix') format('embedded-opentype'),
+      url('../icons/dadosedireitos.ttf?fh515j') format('truetype'),
+      url('../icons/dadosedireitos.woff?fh515j') format('woff'),
+      url('../icons/dadosedireitos.svg?fh515j#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'dadosedireitos' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-instagram:before {
+    content: "\e900";
+  }
+  .icon-close:before {
+    content: "\e901";
+  }
+  .icon-article:before {
+    content: "\e902";
+  }
+  .icon-video:before {
+    content: "\e903";
+  }
+  .icon-dark:before {
+    content: "\e904";
+  }
+  .icon-zoomOut:before {
+    content: "\e905";
+  }
+  .icon-zoomIn:before {
+    content: "\e906";
+  }
+  .icon-grid:before {
+    content: "\e907";
+  }
+  .icon-linkedin:before {
+    content: "\e908";
+  }
+  .icon-facebook:before {
+    content: "\e909";
+  }
+  .icon-arrow-bottom:before {
+    content: "\e90a";
+  }
+  .icon-arrow-left:before {
+    content: "\e90b";
+  }
+  .icon-arrow-up:before {
+    content: "\e90c";
+  }
+  .icon-arrow-right:before {
+    content: "\e90d";
+  }
+  .icon-menu:before {
+    content: "\e90e";
+  }
+  .icon-guia:before {
+    content: "\e90f";
+  }
+  .icon-light:before {
+    content: "\e910";
+  }
+  
+
+  // Actions
+
+  .btn {
+
+      font-weight: 700;
+      border: 2px solid transparent;
+      border-radius: 8px;
+
+      &.lg {
+        line-height: 1.7em;
+        padding: 16px 24px;
+        font-size: 1.3em;
+    }
+
+      &.md {
+          line-height: 0.8em;
+          padding: 16px;
+          font-size: 1em;
+      }
+
+      &.btn-primary {
+        background-color: $accent;
+        color: $carbon;
+      }
+
+      &.btn-outline {
+        color: $white;
+        border: 2px solid $white;
+      }
+  }
+
+
+  // Structure
+
+  .neutral-header {
+      z-index: 2;
+      position: absolute;
+      width: 100%;
+      padding-top: 40px;
+
+      & .action-holder {
+          float: right;
+         & a {
+            margin-left: 16px;
+         }
+      }
+  }
+
+  .main-hero {
+      min-height: 100vh;
+      background: rgba(155, 81, 224, .8);
+      overflow: hidden;
+      position: relative;
+      & .hero-content {
+          margin-top: 20%; 
+          color: $white;
+          max-width: 1000px;
+          padding-bottom: 40px;
+          
+          & .heading, .body {
+              margin: 24px 0;
+          }
+
+          & .action-holder {
+           padding: 16px 0;
+           & a {
+            margin-right: 16px;
+           }
+         }
+      }
+  }
+
+  .main-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../img/hero-image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+
+// MEDIA QUERIES
+
+
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) { 
+    body {
+        font-size: 14px;
+    }
+ }
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 1200px) {
+    
+    body {
+        font-size: 16px;
+    }
+ }
