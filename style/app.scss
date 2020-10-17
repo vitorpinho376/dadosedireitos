@@ -1,3 +1,8 @@
+// Bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+@import '../node_modules/bootstrap/scss/bootstrap-grid.scss';
+@import '../node_modules/bootstrap/scss/_tooltip.scss';
+
 //Global
 
 $accent: #F6D446;
@@ -5,22 +10,109 @@ $primary: #9B51E0;
 $carbon: #321F4A;
 $positive: #27CD56;
 $white: #FFF;
+$grey: #E0E0E0;
 
 body {
-    background-color: #000;
+    background-color: #F6D446;
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 0;
-    font-size: 18px;
+    font-size: 100%;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
+//icons
+
+@font-face {
+  font-family: 'dadosedireitos';
+  src:  url('../icons/dadosedireitos.eot?fh515j');
+  src:  url('../icons/dadosedireitos.eot?fh515j#iefix') format('embedded-opentype'),
+    url('../icons/dadosedireitos.ttf?fh515j') format('truetype'),
+    url('../icons/dadosedireitos.woff?fh515j') format('woff'),
+    url('../icons/dadosedireitos.svg?fh515j#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'dadosedireitos' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-instagram:before {
+  content: "\e900";
+}
+.icon-close:before {
+  content: "\e901";
+}
+.icon-article:before {
+  content: "\e902";
+}
+.icon-video:before {
+  content: "\e903";
+}
+.icon-dark:before {
+  content: "\e904";
+}
+.icon-zoomOut:before {
+  content: "\e905";
+}
+.icon-zoomIn:before {
+  content: "\e906";
+}
+.icon-grid:before {
+  content: "\e907";
+}
+.icon-linkedin:before {
+  content: "\e908";
+}
+.icon-facebook:before {
+  content: "\e909";
+}
+.icon-arrow-bottom:before {
+  content: "\e90a";
+}
+.icon-arrow-left:before {
+  content: "\e90b";
+}
+.icon-arrow-up:before {
+  content: "\e90c";
+}
+.icon-arrow-right:before {
+  content: "\e90d";
+}
+.icon-menu:before {
+  content: "\e90e";
+}
+.icon-guia:before {
+  content: "\e90f";
+}
+.icon-light:before {
+  content: "\e910";
 }
 
 //Type
 
 .heading {
 
-    font-size: 3.5em;
+    font-size: 3.5rem;
 
     &.lg {
         font-weight: 700;
+        line-height: 4.5rem;
     }
 
     &.md {
@@ -35,7 +127,7 @@ body {
 
 .body {
 
-    font-size: 1em;
+    font-size: 1rem;
 
     &.lg {
         font-weight: 700;
@@ -51,106 +143,46 @@ body {
 
 }
 
-
-//icons
-
-@font-face {
-    font-family: 'dadosedireitos';
-    src:  url('../icons/dadosedireitos.eot?fh515j');
-    src:  url('../icons/dadosedireitos.eot?fh515j#iefix') format('embedded-opentype'),
-      url('../icons/dadosedireitos.ttf?fh515j') format('truetype'),
-      url('../icons/dadosedireitos.woff?fh515j') format('woff'),
-      url('../icons/dadosedireitos.svg?fh515j#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
+.content-marker {
+  margin: 48px 0;
+  display: block;
+  & .heading {
+    display: inline;
+    border-bottom: 8px solid $accent;
   }
-  
-  [class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'dadosedireitos' !important;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-  
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  .icon-instagram:before {
-    content: "\e900";
-  }
-  .icon-close:before {
-    content: "\e901";
-  }
-  .icon-article:before {
-    content: "\e902";
-  }
-  .icon-video:before {
-    content: "\e903";
-  }
-  .icon-dark:before {
-    content: "\e904";
-  }
-  .icon-zoomOut:before {
-    content: "\e905";
-  }
-  .icon-zoomIn:before {
-    content: "\e906";
-  }
-  .icon-grid:before {
-    content: "\e907";
-  }
-  .icon-linkedin:before {
-    content: "\e908";
-  }
-  .icon-facebook:before {
-    content: "\e909";
-  }
-  .icon-arrow-bottom:before {
-    content: "\e90a";
-  }
-  .icon-arrow-left:before {
-    content: "\e90b";
-  }
-  .icon-arrow-up:before {
-    content: "\e90c";
-  }
-  .icon-arrow-right:before {
-    content: "\e90d";
-  }
-  .icon-menu:before {
-    content: "\e90e";
-  }
-  .icon-guia:before {
-    content: "\e90f";
-  }
-  .icon-light:before {
-    content: "\e910";
-  }
-  
+}
 
   // Actions
 
   .btn {
 
-      font-weight: 700;
+      font-weight: 600;
       border: 2px solid transparent;
       border-radius: 8px;
 
+      & .icon {
+        vertical-align: middle;
+        font-size: 1.3rem;
+        position: relative;
+        top: -2px;
+
+        &.left {
+          margin-left: 8px;
+        }
+
+        &.right {
+          margin-right: 8px;
+        }
+      }
+
       &.lg {
-        line-height: 1.7em;
-        padding: 16px 24px;
-        font-size: 1.3em;
+        padding: 16px 22px;
+        font-size: 1.3rem;
     }
 
       &.md {
-          line-height: 0.8em;
-          padding: 16px;
-          font-size: 1em;
+          padding: 12px 16px;
+          font-size: 1rem;
       }
 
       &.btn-primary {
@@ -158,11 +190,76 @@ body {
         color: $carbon;
       }
 
+      &.btn-secondary {
+        background-color: $primary;
+        color: white;
+      }
+
       &.btn-outline {
         color: $white;
         border: 2px solid $white;
       }
+
+      &.btn-outline-dark {
+        color: $primary;
+        border: 2px solid $primary;
+      }
   }
+
+  .tag-btn {
+    padding: 2px 8px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border: 2px dashed $carbon;
+    border-radius: 8px;
+    background-color: transparent;
+    color: $carbon;
+    transition: all .3s ease-in-out;
+    cursor: default !important;
+
+    &:hover, &:focus {
+      outline: 0;
+      background-color: $primary;
+      border-color: $white;
+      color: $white;
+    }
+  }
+
+  .popover {
+    max-width: 440px;
+    padding: 24px;
+    color: $white;
+    font-size: 1.125rem;
+    text-align: left;
+    margin: 24px;
+    background-color: $carbon;
+    border-radius: 16px;
+
+    & .popover-header {
+      margin-bottom: 24px;
+      font-size: 1.5rem;
+    }
+
+    & .popover-body {
+      font-size: 1.125rem;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      right: -15px;
+      bottom: -15px;
+      border: 4px dashed $primary;
+      border-radius: 16px;
+    }
+
+    & .arrow {
+      display: none;
+    }
+  }
+  
 
 
   // Structure
@@ -171,26 +268,53 @@ body {
       z-index: 2;
       position: absolute;
       width: 100%;
-      padding-top: 40px;
+      padding: 40px 40px 0;
+
+      & .main-logo {
+        width: 320px;
+      }
 
       & .action-holder {
-          float: right;
+          display: flex;
+          justify-items: flex-end;
          & a {
             margin-left: 16px;
          }
       }
   }
 
+  .hero-detail {
+    width: 100%;
+    position: relative;
+    display: block;
+
+    & .detail-image {
+      max-width: 100%;
+      position: relative;
+      top: -40px;
+    }
+  }
+
+
   .main-hero {
       min-height: 100vh;
       background: rgba(155, 81, 224, .8);
       overflow: hidden;
       position: relative;
+      display: flex;
+      align-items: flex-end;
+      text-align: left;
+
+      & .module-trigger {
+        position: absolute;
+        bottom: 48px;
+        right: 48px;
+      }
+
       & .hero-content {
-          margin-top: 20%; 
           color: $white;
-          max-width: 1000px;
-          padding-bottom: 40px;
+          padding: 40px;
+          max-width: 800px;
           
           & .heading, .body {
               margin: 24px 0;
@@ -198,6 +322,7 @@ body {
 
           & .action-holder {
            padding: 16px 0;
+           margin-bottom: 24px;
            & a {
             margin-right: 16px;
            }
@@ -219,22 +344,198 @@ body {
     z-index: -1;
 }
 
+.main-content {
+  background: $white;
+  border-radius: 8px;
+  padding: 32px;
+  background-color: $accent;
+  position: relative;
+
+  & .module-content {
+    background-color: $white;
+    border-radius: 16px;
+  }
+
+  & .body {
+    margin: 32px 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+
+  }
+}
+
+.section-image {
+  padding: 32px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & img {
+    top: auto;
+    width: 100%;
+    max-width: 440px;
+  }
+}
+
+.module-trigger {
+  background-color: $white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  border-radius: 8px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+  transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  &:hover {
+    transform: translateY(-20px);
+
+    & .icon-arrow-right {
+      color: $primary;
+   }
+
+  }
+
+  & .icon-arrow-right {
+     color: $carbon;
+  }
+
+  & .icon-holder {
+    position: absolute;
+    left: -40px;
+  }
+
+  & .module-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+
+    & .module-num {
+       color: $primary;
+       font-weight: 600;
+    }
+
+    & .module-title {
+      color: $carbon;
+      font-weight: 600;
+   }
+  }
+
+  &.neutral {
+    background-color: $carbon;
+    & .module-title {
+      color: $white;
+      font-weight: 600;
+   }
+    & .icon {
+      color: $white;
+      font-size: 4rem;
+    }
+  }
+}
+
+.brad-coop {
+  background: url(../img/bg-track-01.png) no-repeat;
+  background-position: top;
+  background-size: 98%;
+  min-height: 960px;
+}
+
+.brand-coop-holder {
+  background-color: $white;
+  position: relative;
+  top: 160px;
+  margin: 0 auto;
+  padding: 24px 40px;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+
+  & .brands-holder {
+    padding: 16px 0;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+
+    & .icon {
+      font-size: 2.5rem;
+      color: $grey;
+    }
+  }
+
+  & .coop-content {
+    margin-top: 24px;
+    color: $carbon;
+
+    & h4 {
+      font-size: 20px;
+      line-height: 40px;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+
+    & p {
+      font-size: 16px;
+      line-height: 32px;
+    }
+
+  }
+
+  & .action-holder {
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+
+    & a:first-child {
+      margin-right: 16px;
+    }
+  }
+}
+
+.start-heading {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 48px;
+  color: $carbon;
+  text-align: center;
+  margin: 32px 0;
+}
+
+
+.nav-holder {
+  margin: 32px auto;
+  display: flex;
+  justify-content: space-around;
+  max-width: 900px;
+  
+  & .module-trigger {
+    width: 100%;
+    margin: 0 32px;
+
+    & .module-content {
+      width: 100%;
+    }
+  }
+}
+
 
 // MEDIA QUERIES
 
 
 
+// Large devices (desktops, 992px and up)
+@media (max-width: 1200px) {
+  body {
+      font-size: 120%;
+  }
+}
+
+
 // Medium devices (tablets, 768px and up)
 @media (max-width: 768px) { 
     body {
-        font-size: 14px;
-    }
- }
-
-// Large devices (desktops, 992px and up)
-@media (max-width: 1200px) {
-    
-    body {
-        font-size: 16px;
+        font-size: 150%;
     }
  }
