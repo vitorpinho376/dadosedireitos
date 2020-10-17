@@ -11,12 +11,15 @@
     "type": "git",
     "url": "git+https://github.com/vitorpinho376/dadosedireitos.git"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "author": "Vitor Pinho",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/vitorpinho376/dadosedireitos/issues"
   },
-  "homepage": "https://github.com/vitorpinho376/dadosedireitos#readme"
+  "homepage": "https://github.com/vitorpinho376/dadosedireitos#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "sass": "^1.27.0"
+  }
 }
