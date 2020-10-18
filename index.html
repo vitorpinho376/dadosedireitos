@@ -36,6 +36,27 @@
       </div> 
     </header>
 
+
+    <!-- Main Header -->
+
+    <div class="attached-header hidden">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col">
+            <a class="logo desktop" href="#"><img class="main-logo" src="img/negative-logo.svg" /></a>
+            <a class="logo mob" href="#"><img class="mob-logo mob" src="img/mob-logo.png" /></a>
+          </div>
+          <div class="col">
+            <div class="action-holder justify-content-end">
+              <a href="#" class="btn md btn-outline-carbon extra-nav"><i class="icon icon-guia"></i></a>
+              <a href="#" class="btn md btn-outline-carbon extra-nav"><i class="icon icon-light"></i></a>
+              <a href="#" class="btn md btn-outline-carbon">Menu <i class="icon icon-menu left"></i></a>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+   
     <!-- Main Hero -->
 
     <section class="main-hero"> 
@@ -286,15 +307,21 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/app.js"></script>
     <script>
 
+      //Animate on Scroll Init
+
       AOS.init();
+
+      //Init Popover
 
         $(function () {
           $('.tag-btn').popover({
             trigger: 'hover'
           });
         })
+
     </script>
   
   </body>

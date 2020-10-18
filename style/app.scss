@@ -16,7 +16,7 @@ $white: #FFF;
 $grey: #E0E0E0;
 
 body {
-    background-color: #F6D446;
+    background-color: $white;
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 0;
     font-size: 100%;
@@ -281,6 +281,16 @@ a:hover {
           color: $white;
         }
       }
+
+      &.btn-outline-carbon {
+        color: $carbon;
+        border: 2px solid $carbon;
+
+        &:hover {
+          background-color: $carbon;
+          color: $white;
+        }
+      }
   }
 
   .neutral-link {
@@ -380,6 +390,46 @@ a:hover {
       }
   }
 
+  .attached-header {
+    position: fixed;
+    z-index: 9;
+    background-color: $white;
+    width: 100%;
+    padding: 8px 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+
+    &.hidden {
+      display: none;
+    }
+
+    & .action-holder {
+      display: flex;
+      justify-items: flex-end;
+
+      & a {
+        margin-left: 16px;
+     }
+    }
+
+    & .main-logo {
+        max-width: 208px;
+      }
+    }
+
+    .attached-bottom {
+      position: fixed;
+      z-index: 9;
+      background-color: $accent;
+      width: 100%;
+      padding: 8px 16px;
+      bottom: 0;
+
+      &.hidden {
+        display: none;
+      }
+
+    }
+
   .hero-detail {
     width: 100%;
     position: relative;
@@ -446,12 +496,13 @@ a:hover {
   color: $carbon;
   border-radius: 8px;
   padding: 0 32px;
-  background-color: $accent;
+  background-color: $white;
   position: relative;
 
   & .module-content {
     background-color: $white;
     border-radius: 16px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.16);
   }
 
   & .body {
@@ -709,7 +760,7 @@ footer {
 // Medium devices (tablets, 768px and up)
 @media (max-width: 768px) { 
 
-  .desktop {
+  .desktop, .extra-nav {
     display: none;
   }
 
@@ -769,6 +820,10 @@ footer {
   & .extra-nav {
     display: none;
   }
+}
+
+.mob-logo {
+  width: 60px;
 }
 
 .module-trigger .icon-holder {
