@@ -2,11 +2,14 @@
 @import '../node_modules/bootstrap/scss/bootstrap-reboot.scss';
 @import '../node_modules/bootstrap/scss/bootstrap-grid.scss';
 @import '../node_modules/bootstrap/scss/_tooltip.scss';
+@import '../node_modules/aos/dist/aos.css';
 
 //Global
 
 $accent: #F6D446;
+$accent-alt: #FFE268;
 $primary: #9B51E0;
+$primary-alt: #7F3DBD;
 $carbon: #321F4A;
 $positive: #27CD56;
 $white: #FFF;
@@ -19,8 +22,19 @@ body {
     font-size: 100%;
 }
 
+.logo {
+  transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  &:hover {
+    opacity: .7;
+  }
+}
+
 a:hover {
   text-decoration: none;
+}
+
+.mob {
+  display: none;
 }
 
 
@@ -104,6 +118,43 @@ a:hover {
   content: "\e910";
 }
 
+//Animations
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fadeInUp {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
 //Type
 
 .heading {
@@ -147,6 +198,7 @@ a:hover {
   margin: 48px 0;
   display: block;
   & .heading {
+    color: $carbon;
     display: inline;
     border-bottom: 8px solid $accent;
   }
@@ -159,6 +211,11 @@ a:hover {
       font-weight: 600;
       border: 2px solid transparent;
       border-radius: 8px;
+      transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+      &:hover {
+        box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.08);
+      }
 
       & .icon {
         vertical-align: middle;
@@ -188,22 +245,62 @@ a:hover {
       &.btn-primary {
         background-color: $accent;
         color: $carbon;
+
+        &:hover {
+          background-color: $accent-alt;
+          color: $carbon;
+        }
       }
 
       &.btn-secondary {
         background-color: $primary;
         color: white;
+
+        &:hover {
+          background-color: $primary-alt;
+          color: $white;
+        }
       }
 
       &.btn-outline {
         color: $white;
         border: 2px solid $white;
+
+        &:hover {
+          background-color: $white;
+          color: $carbon;
+        }
       }
 
       &.btn-outline-dark {
         color: $primary;
         border: 2px solid $primary;
+
+        &:hover {
+          background-color: $primary;
+          color: $white;
+        }
       }
+  }
+
+  .neutral-link {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: $white;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      color: rgba(255,255,255,.5);
+    }
+  }
+
+  .social-link {
+    font-size: 2.5rem;
+    color: $white;
+    transition: all .3s ease-in-out;
+    &:hover {
+      color: rgba(255,255,255,.5);
+    }
   }
 
   .tag-btn {
@@ -346,8 +443,9 @@ a:hover {
 
 .main-content {
   background: $white;
+  color: $carbon;
   border-radius: 8px;
-  padding: 32px;
+  padding: 0 32px;
   background-color: $accent;
   position: relative;
 
@@ -361,7 +459,6 @@ a:hover {
     font-weight: 400;
     font-size: 18px;
     line-height: 40px;
-
   }
 }
 
@@ -423,6 +520,9 @@ a:hover {
 
   &.neutral {
     background-color: $carbon;
+    &:hover {
+      background-color: $primary;
+    }
     & .module-title {
       color: $white;
       font-weight: 600;
@@ -520,6 +620,79 @@ a:hover {
   }
 }
 
+footer {
+  background-color: $carbon;
+  color: $white;
+  padding: 40px 0;
+
+  & .brand-holder {
+    padding: 24px 0;
+
+    & img {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+
+  & .tagline {
+    padding: 24px 0;
+    max-width: 340px;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 56px 0;
+
+  & a {
+    margin: 16px 0;
+  }
+}
+
+.social-nav {
+  display: flex;
+  & a {
+    margin: 0 24px;
+  }
+
+  & a:first-child {
+    margin-left: 0;
+  }
+
+  & p {
+    color: rgba(255,255,255,.5);
+    max-width: 160px;
+    font-size: 1rem;
+    margin-left: 24px;
+  }
+
+}
+
+
+.signature-block {
+  & span {
+    font-size: 0.875rem;
+    color: $white;
+  }
+
+  & .neutral-link {
+    font-size: 0.875rem;
+    margin: 0 24px;
+  }
+
+  & .bright-logo {
+    float: right;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+
 
 // MEDIA QUERIES
 
@@ -535,7 +708,195 @@ a:hover {
 
 // Medium devices (tablets, 768px and up)
 @media (max-width: 768px) { 
-    body {
-        font-size: 150%;
+
+  .desktop {
+    display: none;
+  }
+
+  .mob {
+    display: initial;
+  }
+
+    .heading {
+
+    font-size: 2rem;
+
+    &.lg {
+        font-weight: 700;
+        line-height: 2.5rem;
     }
+
+    &.md {
+        font-weight: 600;
+    }
+
+    &.sm {
+        font-weight: 400;
+    }
+
+}
+
+.main-hero {
+  height: 100vh;
+  min-height: 100%;
+
+  & .hero-content {
+    position: relative;
+  }
+  & .module-trigger {
+    display: none;
+  }
+
+  & .action-holder {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    & a:first-child {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.neutral-header {
+
+  padding: 8px;
+
+  & .mob-logo {
+    max-width: 80px;
+  }
+
+  & .extra-nav {
+    display: none;
+  }
+}
+
+.module-trigger .icon-holder {
+  position: relative;
+  left: auto;
+}
+
+.hero-detail .detail-image {
+  top: -20px;
+}
+
+.main-content {
+  padding: 0 8px;
+  & .module-content {
+    padding: 16px;
+  }
+}
+
+.nav-holder {
+  flex-direction: column;
+  padding: 16px;
+
+  & .module-trigger {
+    width: auto;
+    margin: 16px;
+  }
+}
+
+.body {
+
+    font-size: 1rem;
+
+    &.lg {
+        font-weight: 700;
+    }
+
+    &.md {
+        font-weight: 600;
+    }
+
+    &.sm {
+        font-weight: 400;
+    }
+
+}
+
+.brad-coop {
+  width: auto;
+
+  & .brand-coop-holder {
+    top: auto;
+
+    & .brands-holder {
+      width: 100%;
+      flex-direction: column;
+
+      & img, & span {
+        margin: 16px 0;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $carbon;
+  color: $white;
+  padding: 40px 0;
+
+  & .brand-holder {
+    padding: 24px 0;
+
+    & img {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+
+  & .tagline {
+    padding: 24px 0;
+    max-width: 340px;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+
+.footer-nav {
+  padding: 32px 0;
+
+  & a {
+    font-size: 1.5rem;
+    margin: 16px 0;
+  }
+}
+
+
+.social-nav {
+  display: flex;
+  margin: 32px 0;
+
+  & p {
+    color: rgba(255,255,255,.5);
+    max-width: 160px;
+    font-size: 1rem;
+    margin-left: 24px;
+  }
+
+}
+
+.signature-block {
+  & span {
+    padding: 0;
+    margin: 32px 0;
+    font-size: 1rem;
+    color: rgba(255,255,255,.5);
+  }
+
+  & .neutral-link {
+    font-size: 1rem;
+    display: block;
+    margin: 24px 0;
+  }
+
+  & .bright-logo {
+    float: left;
+    margin-top: 32px;
+  }
+}
+
  }
+
+

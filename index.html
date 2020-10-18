@@ -8,8 +8,11 @@
     <!-- Bootstrap CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/app.css"> 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <title>Hello, world!</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+
+    <title>Dados e Direitos Estudantis - O guia informativo da infância e adolecência na internet</title>
   </head>
   <body>
 
@@ -18,13 +21,14 @@
     <header class="neutral-header">
       <div class="container-fluid">
         <div class="row align-items-center">
-          <div class="col-md-4">
-            <img class="main-logo" src="img/logo.svg" />
+          <div class="col">
+            <a class="logo desktop" href="#"><img class="main-logo" src="img/logo.svg" /></a>
+            <a class="logo mob" href="#"><img class="mob-logo mob" src="img/mob-logo.png" /></a>
           </div>
-          <div class="col-md-8">
+          <div class="col">
             <div class="action-holder justify-content-end">
-              <a href="#" class="btn md btn-outline"><i class="icon icon-guia"></i></a>
-              <a href="#" class="btn md btn-outline"><i class="icon icon-light"></i></a>
+              <a href="#" class="btn md btn-outline extra-nav"><i class="icon icon-guia"></i></a>
+              <a href="#" class="btn md btn-outline extra-nav"><i class="icon icon-light"></i></a>
               <a href="#" class="btn md btn-outline">Menu <i class="icon icon-menu left"></i></a>
             </div>
           </div>
@@ -35,7 +39,7 @@
     <!-- Main Hero -->
 
     <section class="main-hero"> 
-      <div class="hero-content">
+      <div class="hero-content fadeInUp">
         <h1 class="heading lg">O guia informativo da infância e adolecência na internet</h1>
         <p class="body sm">O objetivo deste material é auxiliar mães, pais, educadores e gestores escolares a entender melhor o contexto atual de uso da internet.</p>
         <div class="action-holder">
@@ -70,7 +74,7 @@
 
       <!-- Module Content All -->
 
-     <div class="module-content">
+     <div class="module-content" data-aos="fade-up">
        <div class="container">
 
          <!-- Module Row -->
@@ -80,7 +84,7 @@
 
                 <!-- Section Image -->
 
-            <div class="section-image">
+            <div class="section-image"  data-aos="fade-up">
               <img src="img/intro01.png" />
             </div>
           </div>
@@ -91,23 +95,23 @@
 
             <!-- Section Title -->
 
-             <div class="content-marker">
+             <div class="content-marker"  data-aos="fade-up">
               <h2 class="heading lg">Introdução</h2>
              </div>
              
-             <p class="body md">A pandemia da COVID-19 impôs a necessidade, inédita em muitos locais, de medidas de isolamento social, obrigando estados e municípios brasileiros e de todo o mundo a correrem na busca por alternativas e estratégias de 
+             <p class="body md" data-aos="fade-up">A pandemia da COVID-19 impôs a necessidade, inédita em muitos locais, de medidas de isolamento social, obrigando estados e municípios brasileiros e de todo o mundo a correrem na busca por alternativas e estratégias de 
               <button class="tag-btn" data-toggle="popover" 
-              title="Popover title" 
+              title="Popover title"
               data-content="And here's some amazing content. It's very engaging. Right?">Ensino Remoto</button>.
             </p>
-            <p class="body md">Esse movimento abrupto, em um contexto como o nosso, marcado por extremas desigualdades estruturais, expôs ainda mais a fragilidade do direito à educação, especialmente sensível a crianças e adolescentes, e acentuou a vulnerabilidade de <b>grupos que já tinham o acesso a esse direito sistematicamente negado ou dificultado.</b></p>
+            <p class="body md" data-aos="fade-up">Esse movimento abrupto, em um contexto como o nosso, marcado por extremas desigualdades estruturais, expôs ainda mais a fragilidade do direito à educação, especialmente sensível a crianças e adolescentes, e acentuou a vulnerabilidade de <b>grupos que já tinham o acesso a esse direito sistematicamente negado ou dificultado.</b></p>
            </div>
          </div>
 
          <!-- Module Row -->
 
          <div class="row align-items-center">
-          <div class="col-md-6 order-first">
+          <div class="col-md-6 order-first" data-aos="fade-up">
 
                   <!-- Section Image -->
 
@@ -118,7 +122,7 @@
 
             <!-- Section Content -->
             
-          <div class="col-md-6">
+          <div class="col-md-6"  data-aos="fade-up">
 
             <p class="body md">Nesse sentido, a  <button class="tag-btn" data-toggle="popover" 
               title="Popover title" 
@@ -136,7 +140,7 @@
 
             <!-- Section Content -->
             
-          <div class="col">
+          <div class="col" data-aos="fade-up">
            <p class="body md">Mas, por outro lado, para que esse direito possa ser garantido em sua máxima potência e que a experiência de cada um no ambiente digital - educacional ou não - seja positiva, é importante que todos estejam cientes dos problemas que existem na internet. Cartilhas de segurança digital para crianças e adolescentes trazem alertas para riscos da navegação na internet, como: exposição a conteúdos inadequados, publicidade infantil, fake news (desinformação), vícios e uso excessivo, distúrbios de saúde (tais como sedentarismo, obesidade infantil, miopia, distúrbio do sono, ansiedade e estresse), cyberbullying, racismo, machismo, discurso de ódio, nude-self, entre outros. </p>
            <p class="body md">No entanto, pouco ainda se fala - e pouco se sabe - sobre uma das principais e silenciosas atividades a partir das plataformas digitais, que pode ser uma ameaça à sociedade, especialmente às crianças e adolescentes: a exploração de dados pessoais para finalidades comerciais e de predição e a vigilância massiva da população.</p>
           </div>
@@ -151,7 +155,7 @@
         <div class="col-md-12">
           <div class="brad-coop">
             
-              <div class="brand-coop-holder">
+              <div class="brand-coop-holder" data-aos="fade-up">
                 <div class="brands-holder">
                   <img src="img/intervozes.jpg" />
                   <span class="icon icon-close"></span>
@@ -172,7 +176,7 @@
           </div>
         </div>
 
-        <div class="col-md-12">
+        <div class="col-md-12" data-aos="fade-up">
           <h5 class="start-heading">Boa Leitura!</h5>
         </div>
 
@@ -182,7 +186,7 @@
       </div>
     </section>
 
-    <div class="nav-holder">
+    <div class="nav-holder" data-aos="fade-up">
 
          <!-- Module Trigger -->
 
@@ -206,6 +210,74 @@
         <span class="icon icon-arrow-right"></span>
       </a>
     </div>
+
+    <!-- Footer -->
+
+    <footer data-aos="fade-up">
+      <div class="container">
+
+          <!-- Brand Row -->
+
+        <div class="row align-items-center">
+          <div class="col-md-6 col-sm-12">
+             <div class="brand-holder">
+               <img src="img/logo.svg" />
+             </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <p class="tagline">O guia informativo da infância e adolecência na internet.</p>
+          </div>
+        </div>
+
+           <!-- Brand Row -->
+
+           <div class="row">
+            <div class="col-md-6 col-sm-12">
+               <nav class="footer-nav">
+                 <a class="neutral-link" href="#">Guia Completo</a>
+                 <a class="neutral-link" href="#">Módulos</a>
+                 <a class="neutral-link" href="#">Guia de Acessibilidade</a>
+                 <a class="neutral-link" href="#">Enviar para alguém</a>
+                 <a class="neutral-link" href="#">Sobre o projeto</a>
+               </nav>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <nav class="footer-nav">
+                <a class="neutral-link" href="#">Contato</a>
+                <a class="neutral-link" href="#">Quero Contribuir</a>
+              </nav>
+              <nav class="social-nav">
+                <a class="social-link" href="#"><i class="icon icon-facebook"></i></a>
+                <a class="social-link" href="#"><i class="icon icon-instagram"></i></a>
+                <a class="social-link" href="#"><i class="icon icon-linkedin"></i></a>
+                <p>Acompanhe pelas redes sociais.</p>
+              </nav>
+            </div>
+          </div>
+
+          <div class="signature-block">
+            <div class="row align-items-center">
+              <div class="col-md-4 col-sm-12">
+                  <span>© A Escola no Mundo Digital - Dados e Direitos de estudantes - Creative Commons</span>
+                </div>
+                <div class="col-md-5 col-sm-12">
+                  <a class="neutral-link" href="#">Termos de Uso</a>
+                  <a class="neutral-link" href="#">Políticas de Privacidade</a>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                  <a href="#" class="bright-logo">
+                    <img src="img/brightxp.svg" />
+                  </a>
+                </div>
+              </div>
+          </div>
+
+        
+          </div>
+
+
+      </div>
+    </footer>
       
 
     <!-- Optional JavaScript -->
@@ -213,7 +285,11 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+
+      AOS.init();
+
         $(function () {
           $('.tag-btn').popover({
             trigger: 'hover'
