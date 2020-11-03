@@ -15,6 +15,7 @@ $accent-alt: #FFE268;
 $primary: #9B51E0;
 $primary-alt: #7F3DBD;
 $carbon: #321F4A;
+$secondary-carbon: #5A328E;
 $positive: #27CD56;
 $white: #FFF;
 $grey: #E0E0E0;
@@ -701,6 +702,53 @@ a {
   }
 }
 
+.pre-footer {
+  background-color: $secondary-carbon;
+  display: flex;
+  height: 240px;
+  align-items: stretch;
+
+
+  & .main-icon {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    & img {
+      width: 350px;
+      position: relative;
+      left: -56px;
+    }
+  }
+
+  & .pre-content {
+    color: $white;
+    display: flex;
+    align-items: center;
+
+    & .content-holder {
+      max-width: 600px;
+    }
+
+    & h4 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+
+  & .action-holder {
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+     flex-grow: 2;
+     padding: 0 24px;
+
+     & .btn {
+       margin: 0 8px;
+     }
+  }
+}
+
 footer {
   background-color: $carbon;
   color: $white;
@@ -824,6 +872,7 @@ footer {
     & .module-trigger {
       flex-grow: 2;
       margin: 16px 24px;
+      max-width: 350px;
     }
   }
 
@@ -839,6 +888,101 @@ footer {
       opacity: .6;
     }
   }
+}
+
+
+// FORMS
+
+.form-holder {
+  max-width: 500px;
+  margin: 24px auto;
+
+  & .btn {
+    margin: 24px 0;
+    width: 100%;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  & label {
+    font-size: 1.5rem;
+    color: $carbon;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  & .form-control {
+    background-color: #f2f2f2;
+    font-size: 1.5rem;
+    color: $carbon;
+    border: 0;
+    outline: 0;
+    padding: 12px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &::placeholder {
+      color: rgba(50, 31, 74, 0.6);
+    }
+
+    &:focus {
+      background-color: $white;
+      border: 2px solid $primary;
+    }
+  }
+}
+
+.divider {
+  height: 1px;
+  background-color: $grey;
+  width: 100%;
+}
+
+.social-span {
+  font-size: 1.5rem;
+  color: $carbon;
+  margin: 24px auto 0;
+  text-align: center;
+}
+
+.social-share-holder {
+  padding: 56px 0;
+  max-width: 500px;
+  margin: 24px auto;
+
+  & .share-btn {
+    margin: 0 24px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.08);
+    width: 48px;
+    height: 48px;
+    border-radius: 80px;
+    transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &:hover {
+      box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.18);
+    }
+  }
+}
+
+.spreaded {
+  padding-bottom: 320px;
+}
+
+.modal-img {
+  width: 100%;
+  max-width: 520px;
+}
+
+.modal-backdrop {
+  z-index: 18;
+}
+
+#menuModal {
+  z-index: 19;
 }
 
 

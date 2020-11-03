@@ -64,8 +64,8 @@
         <h1 class="heading lg">O guia informativo da infância e adolecência na internet</h1>
         <p class="body sm">O objetivo deste material é auxiliar mães, pais, educadores e gestores escolares a entender melhor o contexto atual de uso da internet.</p>
         <div class="action-holder">
-          <a href="#" class="btn md btn-primary">Ler o Guia</a>
-          <a href="#" class="btn md btn-outline">Enviar para alguém <i class="icon icon-arrow-right"></i></a>
+          <a href="#intro" class="btn md btn-primary">Ler o Guia</a>
+          <a href="#" class="btn md btn-outline" data-toggle="modal" data-target="#shareModal">Enviar para alguém <i class="icon icon-arrow-right"></i></a>
         </div>
       </div>
 
@@ -85,7 +85,7 @@
 
     <!-- Hero Detail -->
 
-    <div class="hero-detail">
+    <div id="intro" class="hero-detail">
       <img class="detail-image" src="img/hero-detail.svg" />
     </div>
 
@@ -234,6 +234,22 @@
 
     <!-- Footer -->
 
+    <div class="pre-footer" data-aos="fade-up">
+      <div class="main-icon">
+        <img src="featured-icons/newsletter.svg" />
+      </div>
+      <div class="pre-content">
+        <div class="content-holder">
+          <h4>Gostou do nosso conteúdo?</h4>
+          <p class="body">Cadastre-se e receba nossas atualizações. Não com partilharemos seu e-mail com mais ninguém, nem enviaremos conteúdo irrelevante.</p>
+        </div>
+      </div>
+      <div class="action-holder">
+        <a href="#" class="btn lg btn-outline" data-toggle="modal" data-target="#shareModal">Compartilhe</a>
+        <a href="#" class="btn lg btn-primary" data-toggle="modal" data-target="#subscribeModal">Inscreva-se</a>
+      </div>
+    </div>
+
     <footer data-aos="fade-up">
       <div class="container">
 
@@ -256,22 +272,20 @@
             <div class="col-md-6 col-sm-12">
                <nav class="footer-nav">
                  <a class="neutral-link" href="#">Guia Completo</a>
-                 <a class="neutral-link" href="#">Módulos</a>
+                 <a class="neutral-link" href="#" data-toggle="modal" data-target="#modulesModal">Módulos</a>
                  <a class="neutral-link" href="#">Guia de Acessibilidade</a>
-                 <a class="neutral-link" href="#">Enviar para alguém</a>
+                 <a class="neutral-link" href="#" data-toggle="modal" data-target="#shareModal">Enviar para alguém</a>
                  <a class="neutral-link" href="#">Sobre o projeto</a>
                </nav>
             </div>
             <div class="col-md-6 col-sm-12">
               <nav class="footer-nav">
                 <a class="neutral-link" href="#">Contato</a>
-                <a class="neutral-link" href="#">Quero Contribuir</a>
+                <a class="neutral-link" href="#">Glossário</a>
               </nav>
               <nav class="social-nav">
-                <a class="social-link" href="#"><i class="icon icon-facebook"></i></a>
-                <a class="social-link" href="#"><i class="icon icon-instagram"></i></a>
-                <a class="social-link" href="#"><i class="icon icon-linkedin"></i></a>
-                <p>Acompanhe pelas redes sociais.</p>
+                <a href="#" class="btn lg btn-primary" data-toggle="modal" data-target="#shareModal">Compartilhe</a>
+                <p>Compartilhe em suas redes sociais.</p>
               </nav>
             </div>
           </div>
@@ -296,6 +310,77 @@
       </div>
     </footer>
 
+     <!-- Share Content Modal -->
+
+     <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="container">
+              <button type="button" class="close btn md btn-outline-dark" data-dismiss="modal" aria-label="Close">
+                <i class="icon icon-close"></i> Fechar
+              </button>
+            </div>
+          </div>
+          <div class="modal-body spreaded">
+            <div class="title-holder">
+                   <h4 class="heading lg">Envie para alguém</h4>
+                   <p class="body sm">Envie esse guia para um familiar, professor ou amigo...</p>
+             </div> 
+             <div class="form-holder">
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Enviar para</label>
+                  <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Digite o e-mail para envio">
+                </div>
+                <button type="submit" class="btn lg btn-secondary">Enviar</button>
+              </form>
+             </div>
+             <h5 class="social-span">Compartilhe nas redes sociais</h5>
+             <div class="social-share-holder">
+               <a href="#" class="share-btn"><img src="img/Facebook.svg"/></a>
+               <a href="#" class="share-btn"><img src="img/Messenger.svg"/></a>
+               <a href="#" class="share-btn"><img src="img/LinkedIN.svg"/></a>
+               <a href="#" class="share-btn"><img src="img/Twitter.svg"/></a>
+               <a href="#" class="share-btn"><img src="img/WhatsApp.svg"/></a>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Subscribe Modal -->
+
+     <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="container">
+              <button type="button" class="close btn md btn-outline-dark" data-dismiss="modal" aria-label="Close">
+                <i class="icon icon-close"></i> Fechar
+              </button>
+            </div>
+          </div>
+          <div class="modal-body spreaded">
+            <div class="title-holder">
+                   <img class="modal-img" src="img/share-img.svg" />
+                   <h4 class="heading lg">Inscreva-se para receber nossas atualizações</h4>
+             </div> 
+             <div class="form-holder">
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">E-mail</label>
+                  <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Digite o seu e-mail">
+                </div>
+                <button type="submit" class="btn lg btn-secondary">Inscrever</button>
+                <span class="body">😅 Fique tranquilo que não mandaremos spam.</span>
+              </form>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Modules Modal -->
 
     <div class="modal fade" id="modulesModal" tabindex="-1" aria-labelledby="modulesModalLabel" aria-hidden="true">
@@ -319,11 +404,11 @@
 
                   <a href="#" class="module-trigger">
                     <div class="icon-holder">
-                        <img src="icons/Internet.svg" />
+                        <img src="featured-icons/inicio.svg" />
                     </div>
                     <div class="module-content">
-                      <span class="module-num">1º Módulo</span>
-                      <span class="module-title">Mas o que é internet?</span>
+                      <span class="module-num">Introdução</span>
+                      <span class="module-title">Sobre o guia informativo</span>
                     </div>
                     <span class="icon icon-arrow-right"></span>
                   </a>
@@ -332,7 +417,7 @@
 
                       <a href="#" class="module-trigger">
                         <div class="icon-holder">
-                            <img src="icons/Internet.svg" />
+                            <img src="featured-icons/internet.svg" />
                         </div>
                         <div class="module-content">
                           <span class="module-num">1º Módulo</span>
@@ -345,11 +430,11 @@
 
                   <a href="#" class="module-trigger">
                     <div class="icon-holder">
-                        <img src="icons/Internet.svg" />
+                        <img src="featured-icons/pricing.svg" />
                     </div>
                     <div class="module-content">
-                      <span class="module-num">1º Módulo</span>
-                      <span class="module-title">Mas o que é internet?</span>
+                      <span class="module-num">2º Módulo</span>
+                      <span class="module-title">Quanto se paga para usar a internet?</span>
                     </div>
                     <span class="icon icon-arrow-right"></span>
                   </a>
@@ -358,11 +443,11 @@
 
                       <a href="#" class="module-trigger">
                         <div class="icon-holder">
-                            <img src="icons/Internet.svg" />
+                            <img src="featured-icons/users.svg" />
                         </div>
                         <div class="module-content">
-                          <span class="module-num">1º Módulo</span>
-                          <span class="module-title">Mas o que é internet?</span>
+                          <span class="module-num">3º Módulo</span>
+                          <span class="module-title">Quem acessa a internet?</span>
                         </div>
                         <span class="icon icon-arrow-right"></span>
                       </a>
@@ -371,11 +456,11 @@
 
                   <a href="#" class="module-trigger">
                     <div class="icon-holder">
-                        <img src="icons/Internet.svg" />
+                        <img src="featured-icons/unequality.svg" />
                     </div>
                     <div class="module-content">
-                      <span class="module-num">1º Módulo</span>
-                      <span class="module-title">Mas o que é internet?</span>
+                      <span class="module-num">4º Módulo</span>
+                      <span class="module-title">Rastro digital, algoritmos, desigualdades de acesso… E agora?</span>
                     </div>
                     <span class="icon icon-arrow-right"></span>
                   </a>
@@ -384,11 +469,11 @@
 
                       <a href="#" class="module-trigger">
                         <div class="icon-holder">
-                            <img src="icons/Internet.svg" />
+                            <img src="featured-icons/protect.svg" />
                         </div>
                         <div class="module-content">
-                          <span class="module-num">1º Módulo</span>
-                          <span class="module-title">Mas o que é internet?</span>
+                          <span class="module-num">5º Módulo</span>
+                          <span class="module-title">importância da proteção de dados pessoais estudantis</span>
                         </div>
                         <span class="icon icon-arrow-right"></span>
                       </a>
@@ -397,11 +482,11 @@
 
                   <a href="#" class="module-trigger">
                     <div class="icon-holder">
-                        <img src="icons/Internet.svg" />
+                        <img src="featured-icons/worries.svg" />
                     </div>
                     <div class="module-content">
-                      <span class="module-num">1º Módulo</span>
-                      <span class="module-title">Mas o que é internet?</span>
+                      <span class="module-num">6º Módulo</span>
+                      <span class="module-title">Por que devemos nos preocupar com o uso correto de dados pessoais estudantis?</span>
                     </div>
                     <span class="icon icon-arrow-right"></span>
                   </a>
@@ -410,11 +495,37 @@
 
                       <a href="#" class="module-trigger">
                         <div class="icon-holder">
-                            <img src="icons/Internet.svg" />
+                            <img src="featured-icons/protect-question.svg" />
                         </div>
                         <div class="module-content">
-                          <span class="module-num">1º Módulo</span>
-                          <span class="module-title">Mas o que é internet?</span>
+                          <span class="module-num">7º Módulo</span>
+                          <span class="module-title">Quais proteções existem em relação aos dados pessoais escolares?</span>
+                        </div>
+                        <span class="icon icon-arrow-right"></span>
+                      </a>
+
+                       <!-- Module Trigger -->
+
+                       <a href="#" class="module-trigger">
+                        <div class="icon-holder">
+                            <img src="featured-icons/free.svg" />
+                        </div>
+                        <div class="module-content">
+                          <span class="module-num">8º Módulo</span>
+                          <span class="module-title">Alternativas: Recursos Educacionais Abertos, software livre e outras tecnologias de código aberto/colaborativo voltadas para o ensino</span>
+                        </div>
+                        <span class="icon icon-arrow-right"></span>
+                      </a>
+
+                      <!-- Module Trigger -->
+
+                      <a href="#" class="module-trigger">
+                        <div class="icon-holder">
+                            <img src="featured-icons/coveryou.svg" />
+                        </div>
+                        <div class="module-content">
+                          <span class="module-num">9º Módulo</span>
+                          <span class="module-title">Diante de tantos desafios, como cada um de nós pode agir?</span>
                         </div>
                         <span class="icon icon-arrow-right"></span>
                       </a>
@@ -445,12 +556,12 @@
               
             <nav class="menu-nav">
               <a class="primary-link" href="#">Guia Completo</a>
-              <a class="primary-link" href="#">Módulos</a>
+              <a class="primary-link" href="#" data-toggle="modal" data-target="#modulesModal">Módulos</a>
               <a class="primary-link" href="#">Guia de Acessibilidade</a>
-              <a class="primary-link" href="#">Enviar para alguém</a>
+              <a class="primary-link" href="#" data-toggle="modal" data-target="#shareModal">Enviar para alguém</a>
               <a class="primary-link" href="#">Sobre o projeto</a>
               <a class="primary-link" href="#">Contato</a>
-              <a class="primary-link" href="#">Quero Contribuir</a>
+              <a class="primary-link" href="#" data-toggle="modal" data-target="#subscribeModal">Inscreva-se</a>
             </nav>
             <nav class="social-nav">
               <a class="social-link tint" href="#"><i class="icon icon-facebook"></i></a>
