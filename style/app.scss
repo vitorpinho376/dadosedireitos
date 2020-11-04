@@ -159,7 +159,6 @@ a {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
-
 //Type
 
 .heading {
@@ -299,8 +298,6 @@ a {
       }
   }
 
-
-
   .primary-link {
     font-weight: 600;
     font-size: 1.5rem;
@@ -309,6 +306,17 @@ a {
 
     &:hover {
       color: $primary-alt;
+    }
+  }
+
+  .more-info-trigger {
+    font-weight: 600;
+    text-decoration: underline !important;
+    color: inherit;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      color: $primary;
     }
   }
 
@@ -420,6 +428,7 @@ a {
   }
 
   .attached-header {
+    top: 0;
     position: fixed;
     z-index: 9;
     background-color: $white;
@@ -528,6 +537,23 @@ a {
   background-color: $white;
   position: relative;
 
+  &.guide-container {
+    padding: 0;
+    background-color: $white;
+    max-width: 96%;
+    margin: 0 auto;
+
+    & .start-heading {
+      text-align: left;
+      font-size: 2.5rem;
+      margin: 80px 0 !important;
+    }
+
+    & .module-content {
+      box-shadow: none;
+    }
+  }
+
   & .module-content {
     background-color: $white;
     border-radius: 16px;
@@ -572,15 +598,26 @@ a {
       right: 0;
    }
 
+   & .icon-arrow-left {
+    color: $primary;
+    left: 0;
   }
 
-  & .icon-arrow-right {
+  }
+
+  & .icon-arrow-right, & .icon-arrow-left {
      color: $carbon;
   }
 
   & .icon-holder {
     position: absolute;
     left: -40px;
+  }
+
+  & .icon-holder.inverted {
+    position: absolute;
+    left: auto;
+    right: -40px;
   }
 
   & .module-content {
@@ -618,8 +655,8 @@ a {
 
 .brad-coop {
   background: url(../img/bg-track-01.png) no-repeat;
-  background-position: top;
-  background-size: 98%;
+  background-position: bottom;
+  background-size: 90%;
   min-height: 960px;
 }
 
@@ -700,6 +737,10 @@ a {
       width: 100%;
     }
   }
+}
+
+.divider-tab {
+  width: 60px;
 }
 
 .pre-footer {
@@ -853,10 +894,23 @@ footer {
 
   & .modal-content {
     height: auto;
-  min-height: 100%;
+    min-height: 100%;
     background: $white url(../img/modal-bg.jpg) no-repeat;
     background-position: bottom;
     background-size: 100%;
+
+    & .content-holder {
+      & .body {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        color: $carbon;
+        max-width: 800px;
+
+        & .primary-link {
+          word-wrap: break-word;
+        }
+      }
+    }
 
     &.custom-bg {
       background-image: none !important;
@@ -985,6 +1039,160 @@ footer {
   z-index: 19;
 }
 
+.full-guide {
+  background-color: $primary;
+  & .neutral-header {
+    background-color: $primary;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 24px;
+  }
+}
+
+.main-cover {
+  position: relative;
+  background-color: $white;
+  overflow: hidden;
+  min-height: 100%;
+    & img {
+      width: 100%;
+    }
+}
+
+.pro-cover {
+  background-color: $secondary-carbon;
+  text-align: center;
+  color: $white;
+  padding: 80px;
+
+  & .cover-icon {
+    width: 180px;
+  }
+
+  & h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 3rem;
+    max-width: 800px;
+    margin: 24px auto;
+  }
+
+  & p {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    max-width: 800px;
+    margin: 24px auto;
+  }
+}
+
+
+.module-title-block {
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+
+  & .module-icon {
+    margin-right: 32px;
+    & img {
+      width: 140px;
+    }
+  }
+
+  & span {
+    font-size: 1.5rem;
+    color: $primary;
+    font-weight: 600;
+  }
+
+  & h3 {
+    font-size: 3rem;
+    color: $carbon;
+    font-weight: 700;
+  }
+}
+
+.quote-group {
+  padding: 24px;
+  width: 100%;
+  border-radius: 8px;
+  margin: 24px 0;
+
+  & .body {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  & .icon {
+    display: block;
+    margin-bottom: 24px;
+    font-size: 4rem;
+  }
+
+  &.featured {
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+.page-hero {
+  height: 500px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 40px;
+  background-color: rgba(155, 81, 224, .7);
+
+  & .module-title-block {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+  
+    & span {
+      color: $white;
+      opacity: .6;
+    }
+  
+    & h3 {
+      color: $white;
+    }
+  }
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: url(../img/module01bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.module-main-content {
+  background-color: $white;
+
+  & .module-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: $white;
+    border-radius: 16px;
+    color: $carbon;
+
+    & .body {
+      margin: 32px 0;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 40px;;
+    }
+  }
+}
+
+
 
 // MEDIA QUERIES
 
@@ -1070,6 +1278,11 @@ footer {
 .module-trigger .icon-holder {
   position: relative;
   left: auto;
+
+  &.inverted {
+    position: relative;
+    right: auto;
+  }
 }
 
 .hero-detail .detail-image {
@@ -1089,7 +1302,7 @@ footer {
 
   & .module-trigger {
     width: auto;
-    margin: 16px;
+    margin: 16px 24px;
   }
 }
 
