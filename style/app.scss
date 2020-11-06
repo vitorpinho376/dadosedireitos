@@ -47,11 +47,11 @@ a {
 
 @font-face {
   font-family: 'dadosedireitos';
-  src:  url('../icons/dadosedireitos.eot?fh515j');
-  src:  url('../icons/dadosedireitos.eot?fh515j#iefix') format('embedded-opentype'),
-    url('../icons/dadosedireitos.ttf?fh515j') format('truetype'),
-    url('../icons/dadosedireitos.woff?fh515j') format('woff'),
-    url('../icons/dadosedireitos.svg?fh515j#icomoon') format('svg');
+  src:  url('../icons/dadosedireitos.eot?yeajca');
+  src:  url('../icons/dadosedireitos.eot?yeajca#iefix') format('embedded-opentype'),
+    url('../icons/dadosedireitos.ttf?yeajca') format('truetype'),
+    url('../icons/dadosedireitos.woff?yeajca') format('woff'),
+    url('../icons/dadosedireitos.svg?yeajca#dadosedireitos') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -71,56 +71,107 @@ a {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-instagram:before {
+.icon-zoomOut:before {
   content: "\e900";
 }
-.icon-close:before {
+.icon-zoomIn:before {
   content: "\e901";
 }
-.icon-article:before {
+.icon-video:before {
   content: "\e902";
 }
-.icon-video:before {
+.icon-menu:before {
   content: "\e903";
 }
-.icon-dark:before {
+.icon-linkedin:before {
   content: "\e904";
 }
-.icon-zoomOut:before {
+.icon-light:before {
   content: "\e905";
 }
-.icon-zoomIn:before {
+.icon-instagram:before {
   content: "\e906";
 }
-.icon-grid:before {
+.icon-guia:before {
   content: "\e907";
 }
-.icon-linkedin:before {
+.icon-grid:before {
   content: "\e908";
 }
-.icon-facebook:before {
+.icon-glossario:before {
   content: "\e909";
 }
-.icon-arrow-bottom:before {
+.icon-facebook:before {
   content: "\e90a";
 }
-.icon-arrow-left:before {
+.icon-dark:before {
   content: "\e90b";
 }
-.icon-arrow-up:before {
+.icon-coffee:before {
   content: "\e90c";
 }
-.icon-arrow-right:before {
+.icon-close:before {
   content: "\e90d";
 }
-.icon-menu:before {
+.icon-clip:before {
   content: "\e90e";
 }
-.icon-guia:before {
+.icon-article:before {
   content: "\e90f";
 }
-.icon-light:before {
+.icon-arrow-Up:before {
   content: "\e910";
+}
+.icon-arrow-right:before {
+  content: "\e911";
+}
+.icon-arrow-left:before {
+  content: "\e912";
+}
+.icon-arrow-bottom:before {
+  content: "\e913";
+}
+.icon-anexo:before {
+  content: "\e914";
+}
+.icon-alert:before {
+  content: "\e915";
+}
+.icon-plus:before {
+  content: "\e916";
+}
+.icon-checkbox-checked:before {
+  content: "\ea52";
+}
+.icon-checkbox-unchecked:before {
+  content: "\ea53";
+}
+.icon-radio-checked:before {
+  content: "\ea54";
+}
+.icon-radio-checked2:before {
+  content: "\ea55";
+}
+.icon-radio-unchecked:before {
+  content: "\ea56";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-whatsapp:before {
+  content: "\ea93";
+}
+.icon-spotify:before {
+  content: "\ea94";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-youtube:before {
+  content: "\ea9d";
 }
 
 //Animations
@@ -1306,6 +1357,7 @@ footer {
 .law-grid {
   display: flex;
   flex-wrap: wrap;
+  margin: 32px 0;
 }
 
 .law-block {
@@ -1319,9 +1371,71 @@ footer {
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
 
    & .icon {
-     font-size: 5rem;
+     font-size: 4rem;
      color: rgba(50,31,74,0.3);
+     display: block;
+     margin-bottom: 32px;
    }
+}
+
+.featured-banner {
+  padding: 24px;
+  font-size: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+  margin: 24px 0;
+
+  & p {
+    margin: 0;
+  }
+
+  &.primary {
+    background-color: $primary;
+    color: $white;
+    & a {
+      color: $white;
+    }
+  }
+
+  &.feat {
+    background-color: $accent;
+    color: $carbon;
+    & a {
+      color: $carbon;
+    }
+  }
+
+  & a {
+    font-size: 2rem;
+    font-weight: 600;
+
+    &:hover {
+      opacity: .6;
+      color: inherit;
+    }
+  }
+}
+
+.bullet-line {
+  display: flex;
+  font-size: 1.25rem;
+  color: $carbon;
+  font-weight: 600;
+
+  & span {
+    font-size: 1.5rem;
+    margin-right: 8px;
+    vertical-align: middle;
+    color: $accent;
+  }
+}
+
+.bullet-line-section {
+  margin: 60px 0;
+}
+
+.bullet-line-section .neutral-heading {
+  margin-bottom: 24px;
 }
 
 // MEDIA QUERIES
