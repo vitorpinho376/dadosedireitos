@@ -351,9 +351,10 @@ a {
   }
 
   .tag-btn {
-    padding: 2px 8px;
+    padding: 0 8px;
     font-size: 1.125rem;
     font-weight: 600;
+    margin: 8px 0;
     border: 2px dashed $carbon;
     border-radius: 8px;
     background-color: transparent;
@@ -654,7 +655,7 @@ a {
 }
 
 .brad-coop {
-  background: url(../img/bg-track-01.png) no-repeat;
+  background: url(../img/bg-track-01.svg) no-repeat;
   background-position: bottom;
   background-size: 90%;
   min-height: 960px;
@@ -895,7 +896,7 @@ footer {
   & .modal-content {
     height: auto;
     min-height: 100%;
-    background: $white url(../img/modal-bg.jpg) no-repeat;
+    background: $white url(../img/modal-bg.svg) no-repeat;
     background-position: bottom;
     background-size: 100%;
 
@@ -1117,9 +1118,10 @@ footer {
   width: 100%;
   border-radius: 8px;
   margin: 24px 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
 
   & .body {
-    margin: 0;
+    margin: 0 !important;
     font-size: 1.5rem;
   }
 
@@ -1127,11 +1129,16 @@ footer {
     display: block;
     margin-bottom: 24px;
     font-size: 4rem;
+    color: $primary;
   }
 
   &.featured {
     background-color: $primary;
     color: $white;
+
+    & .icon {
+      color: $white;
+    }
   }
 }
 
@@ -1189,6 +1196,72 @@ footer {
       font-size: 18px;
       line-height: 40px;;
     }
+  }
+}
+
+.mod-featured-hd {
+  font-size: 2rem;
+  line-height: 3rem;
+  color: $primary;
+}
+
+
+.bg-detail-01 {
+  margin: 40px 0;
+  width: 100%;
+  background: url(../img/bg-detail-01.svg) no-repeat;
+  background-position: center;
+  background-size: 90%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-card {
+  padding: 40px 24px;
+  border-radius: 8px;
+  margin: 0 auto;
+  background-color: $white;
+  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+  max-width: 700px;
+
+  & .heading {
+    color: $primary;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    margin-bottom: 24px;
+  }
+
+  & p {
+    font-size: 1rem;
+    color: $carbon;
+  }
+}
+
+.alert-block {
+  padding: 32px;
+  border: 3px dashed $primary;
+  font-size: 1.25rem;
+  color: $carbon;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  margin: 32px 0;
+  box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.08);
+
+  & strong {
+    font-size: 1.5rem;
+  }
+
+  & .content-holder {
+    margin-left: 32px;
+  }
+  & .icon {
+    font-size: 5rem;
+    color: $primary;
   }
 }
 
