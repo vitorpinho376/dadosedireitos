@@ -59,7 +59,7 @@
 
     <!-- Cookie Validator -->
 
-    <div class="cookie-val">
+    <div id="cookie-val" class="cookie-val">
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-md-1">
@@ -69,7 +69,7 @@
             <p>Este site utiliza cookies para personalizar sua experiência e adequar o marketing aos seus interesses. Por favor, utilize este site apenas se você concordar com os termos da nossa Política de Privacidade.</p>
           </div>
           <div class="col-md-3">
-            <a href="#" class="btn md btn-secondary">Eu concordo</a>
+            <a href="#" onclick="hiddenCookie();" class="btn md btn-secondary">Eu concordo</a>
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@
 
     <section class="main-hero"> 
       <div class="hero-content fadeInUp">
-        <h1 class="heading lg">Um guia informativo sobre o uso <br>de tecnologias nas escolas <br>e a proteção de crianças <br>e adolescentes</h1>
+        <h1 class="heading lg">Um guia sobre de tecnologias nas escolas e a proteção de crianças e adolescentes</h1>
         <p class="body sm">O objetivo deste material é auxiliar mães, pais, educadores e gestores escolares <br>a entender melhor o contexto atual de uso da internet.</p>
         <div class="action-holder">
           <a href="#intro" class="btn md btn-primary">Ler o Guia</a>
@@ -598,6 +598,11 @@
             trigger: 'hover'
           });
         })
+
+        function hiddenCookie() {
+          const cookieVal = document.getElementById('cookie-val');
+          cookieVal.classList.add('hidden');
+        }
 
     </script>
   

@@ -559,7 +559,7 @@ a {
 
           & .action-holder {
            padding: 16px 0;
-           margin-bottom: 64px;
+           margin-bottom: 94px;
            & a {
             margin-right: 16px;
            }
@@ -575,6 +575,15 @@ a {
     bottom: 0;
     z-index: 24;
     padding: 16px 24px;
+    box-shadow: 0px -8px 10px rgba(0, 0, 0, 0.08);
+
+    &.hidden {
+      display: none;
+    }
+
+    & p { 
+      margin: 0;
+    }
 
     & .icon {
       font-size: 4rem;
