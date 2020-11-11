@@ -4,7 +4,7 @@
     
     var myScrollFunc = function () {
         var topScroll = window.scrollY;
-        if (topScroll >= 700) {
+        if (topScroll >= 600) {
             topBar.classList.remove('hidden');
         } else {
             topBar.classList.add('hidden');
