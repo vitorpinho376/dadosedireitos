@@ -594,7 +594,7 @@ a {
       & .hero-content {
           color: $white;
           padding: 40px;
-          max-width: 1200px;
+          max-width: 940px;
           
           & .heading, .body {
               margin: 24px 0;
@@ -619,6 +619,10 @@ a {
     z-index: 24;
     padding: 16px 24px;
     box-shadow: 0px -8px 10px rgba(0, 0, 0, 0.08);
+
+    & .primary-link {
+      font-size: inherit;
+    }
 
     &.hidden {
       display: none;
@@ -1082,7 +1086,6 @@ footer {
       background-color: $carbon;
       border-radius: 16px;
       position: relative;
-      z-index: 9999;
 
       & .glossary-text {
         font-size: 1.2rem;
@@ -1160,7 +1163,13 @@ footer {
       flex-grow: 2;
       margin: 16px 24px;
       max-width: 350px;
+      
+      &.intro-trigger {
+        margin: 0 auto;
+        min-height: 140px;
+      }
     }
+
   }
 
   & .title-holder {
@@ -1627,10 +1636,16 @@ footer {
   position: relative;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
 
-  & .trigger-content {
+  & .bullet-trigger {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &[aria-expanded="true"] {
+      & .icon-chevron-down:before {
+        content: "\e917" !important;
+      }
+    }
 
     & .icon {
       color: $primary;
@@ -1649,15 +1664,6 @@ footer {
     font-weight: 400;
     line-height: 1.5rem;
     color: $secondary-carbon;
-  }
-
-  & .bullet-trigger {
-    position: absolute;
-    z-index: 3;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
   }
 }
 
@@ -1850,8 +1856,8 @@ footer {
 .bullet-line {
   display: flex;
   font-size: 1.25rem;
+  line-height: 2.5rem;
   color: $carbon;
-  font-weight: 600;
 
   & span {
     font-size: 1.5rem;
