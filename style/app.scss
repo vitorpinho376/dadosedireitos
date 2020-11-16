@@ -251,11 +251,11 @@ a {
 
 .heading {
 
-    font-size: 3.5rem;
+    font-size: 3rem;
 
     &.lg {
         font-weight: 700;
-        line-height: 4.5rem;
+        line-height: 4rem;
     }
 
     &.md {
@@ -629,7 +629,7 @@ a {
       & .hero-content {
           color: $white;
           padding: 40px;
-          max-width: 940px;
+          max-width: 100%;
           
           & .heading, .body {
               margin: 24px 0;
