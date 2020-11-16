@@ -24,36 +24,6 @@ html {
   scroll-behavior: smooth;
 }
 
-a, button, input, textarea, select, area {
-  &:focus {
-    outline: 2px dashed $primary !important;
-  }
-}
-
-.main-hero {
-  & a, button, input, textarea, select, area {
-    &:focus {
-      outline: 2px dashed $white !important;
-    }
-  }
-}
-
-.neutral-header {
-  & a, button, input, textarea, select, area {
-    &:focus {
-      outline: 2px dashed $white !important;
-    }
-  }
-}
-
-.page-hero {
-  & a, button, input, textarea, select, area {
-    &:focus {
-      outline: 2px dashed $white !important;
-    }
-  }
-}
-
 iframe {
   margin: 0 auto;
   width: 100%;
