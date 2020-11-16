@@ -30,3 +30,11 @@
         /* Alert the copied text */
         alert( "Link copiado! Agora, é só colar onde quiser. Envie para um amigo ou poste em suas redes sociais.");
       } 
+
+
+      function darkMode() {
+        var element = document.body;
+        element.classList.toggle("darkMode");
+      }
+
+      

@@ -1919,9 +1919,18 @@ footer {
   margin-bottom: 24px;
 }
 
+
+
 // MEDIA QUERIES
 
+body.darkmode {
 
+  & .main-content {
+    color: $white !important;
+    background-color: $carbon !important;
+  }
+
+}
 
 // Large devices (desktops, 992px and up)
 @media (max-width: 1200px) {
