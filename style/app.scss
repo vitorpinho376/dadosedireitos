@@ -450,12 +450,11 @@ a {
 
   .more-info-trigger {
     font-weight: 600;
-    text-decoration: underline !important;
-    color: inherit;
+    color: $primary;
     transition: all .3s ease-in-out;
 
     &:hover {
-      color: $primary;
+      color: $primary-alt;
     }
   }
 
