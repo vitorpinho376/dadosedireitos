@@ -461,9 +461,9 @@
 
 </footer>
 
-   <!-- Share Content Modal -->
+  <!-- Share Content Modal -->
 
-   <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+  <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -481,12 +481,14 @@
            <div class="form-holder">
             <form>
               <div class="form-group">
-                <label for="exampleInputEmail1">Enviar para</label>
-                <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Digite o e-mail para envio">
+                <label for="exampleInputEmail1">Copie e cole</label>
+                <input type="text" class="form-control disabled" id="urlfield" aria-describedby="emailHelp" value="https://dadosestudantis.org.br/">
               </div>
-              <button type="submit" class="btn lg btn-secondary">Enviar</button>
+              <button class="btn lg btn-secondary" onclick="copyToClip();">Copiar Link</button>
             </form>
            </div>
+
+            <!-- Subscribe Modal 
            <h5 class="social-span">Compartilhe nas redes sociais</h5>
            <div class="social-share-holder">
              <a href="#" class="share-btn"><img src="img/Facebook.svg"/></a>
@@ -495,6 +497,7 @@
              <a href="#" class="share-btn"><img src="img/Twitter.svg"/></a>
              <a href="#" class="share-btn"><img src="img/WhatsApp.svg"/></a>
            </div>
+           -->
         </div>
       </div>
     </div>

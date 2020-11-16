@@ -12,3 +12,21 @@
     };
     
     window.addEventListener("scroll", myScrollFunc);
+
+
+    //Copy to Clipboard
+
+    function copyToClip() {
+        /* Get the text field */
+        var copyText = document.getElementById("urlfield");
+      
+        /* Select the text field */
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+      
+        /* Copy the text inside the text field */
+        document.execCommand("copy");
+      
+        /* Alert the copied text */
+        alert( "Link copiado! Agora, é só colar onde quiser. Envie para um amigo ou poste em suas redes sociais.");
+      } 

@@ -259,44 +259,47 @@
 
   </footer>
 
-     <!-- Share Content Modal -->
+  <!-- Share Content Modal -->
 
-     <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <div class="container">
-              <button type="button" class="close btn md btn-outline-dark" data-dismiss="modal" aria-label="Close">
-                <i class="icon icon-close"></i> Fechar
-              </button>
-            </div>
+  <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="container">
+            <button type="button" class="close btn md btn-outline-dark" data-dismiss="modal" aria-label="Close">
+              <i class="icon icon-close"></i> Fechar
+            </button>
           </div>
-          <div class="modal-body spreaded">
-            <div class="title-holder">
-                   <h4 class="heading lg">Envie para alguém</h4>
-                   <p class="body sm">Envie esse guia para um familiar, professor ou amigo...</p>
-             </div> 
-             <div class="form-holder">
-              <form>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Enviar para</label>
-                  <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Digite o e-mail para envio">
-                </div>
-                <button type="submit" class="btn lg btn-secondary">Enviar</button>
-              </form>
-             </div>
-             <h5 class="social-span">Compartilhe nas redes sociais</h5>
-             <div class="social-share-holder">
-               <a href="#" class="share-btn"><img src="img/Facebook.svg"/></a>
-               <a href="#" class="share-btn"><img src="img/Messenger.svg"/></a>
-               <a href="#" class="share-btn"><img src="img/LinkedIN.svg"/></a>
-               <a href="#" class="share-btn"><img src="img/Twitter.svg"/></a>
-               <a href="#" class="share-btn"><img src="img/WhatsApp.svg"/></a>
-             </div>
-          </div>
+        </div>
+        <div class="modal-body spreaded">
+          <div class="title-holder">
+                 <h4 class="heading lg">Envie para alguém</h4>
+                 <p class="body sm">Envie esse guia para um familiar, professor ou amigo...</p>
+           </div> 
+           <div class="form-holder">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Copie e cole</label>
+                <input type="text" class="form-control disabled" id="urlfield" aria-describedby="emailHelp" value="https://dadosestudantis.org.br/">
+              </div>
+              <button class="btn lg btn-secondary" onclick="copyToClip();">Copiar Link</button>
+            </form>
+           </div>
+
+            <!-- Subscribe Modal 
+           <h5 class="social-span">Compartilhe nas redes sociais</h5>
+           <div class="social-share-holder">
+             <a href="#" class="share-btn"><img src="img/Facebook.svg"/></a>
+             <a href="#" class="share-btn"><img src="img/Messenger.svg"/></a>
+             <a href="#" class="share-btn"><img src="img/LinkedIN.svg"/></a>
+             <a href="#" class="share-btn"><img src="img/Twitter.svg"/></a>
+             <a href="#" class="share-btn"><img src="img/WhatsApp.svg"/></a>
+           </div>
+           -->
         </div>
       </div>
     </div>
+  </div>
 
      <!-- Subscribe Modal -->
 
