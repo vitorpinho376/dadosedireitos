@@ -1970,11 +1970,12 @@ footer {
 }
 
 .main-hero {
-  height: 100vh;
-  min-height: 100%;
+  height: auto;
+  min-height: 100vh;
 
   & .hero-content {
     position: relative;
+    padding-top: 56px;
   }
   & .module-trigger {
     display: none;
@@ -2275,6 +2276,12 @@ footer {
       color: $carbon;
       font-weight: 700;
     }
+  }
+
+  .modal-dialog .modules-list .module-trigger {
+    flex-grow: 2;
+    margin: 16px 0;
+    max-width: 100%;
   }
 
 
