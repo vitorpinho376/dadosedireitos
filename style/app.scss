@@ -607,6 +607,7 @@ a {
       max-width: 100%;
       position: relative;
       top: -40px;
+      width: 100%;
     }
   }
 
@@ -628,7 +629,7 @@ a {
 
       & .hero-content {
           color: $white;
-          padding: 40px;
+          padding: 25% 40px 0;
           max-width: 100%;
           
           & .heading, .body {
@@ -678,7 +679,7 @@ a {
     }
 
     & p { 
-      margin: 0;
+      padding: 0 8px;
     }
 
     & .icon {
@@ -2068,7 +2069,6 @@ body.darkmode {
 
   & .hero-content {
     position: relative;
-    padding-top: 56px;
   }
   & .module-trigger {
     display: none;
@@ -2324,6 +2324,12 @@ footer {
     flex-grow: 2;
     margin: 16px 0;
     max-width: 100%;
+  }
+
+  .cookiealert { 
+    & p {
+      padding: 24px 0;
+    }
   }
 
 
