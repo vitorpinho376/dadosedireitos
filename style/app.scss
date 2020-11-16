@@ -452,6 +452,8 @@ a {
     font-weight: 600;
     color: $primary;
     transition: all .3s ease-in-out;
+    border: 0;
+    background-color: transparent;
 
     &:hover {
       color: $primary-alt;
@@ -2146,6 +2148,135 @@ footer {
     margin-top: 32px;
   }
 }
+
+.pre-footer {
+  background-color: $secondary-carbon;
+  display: block;
+  height: auto;
+  padding: 24px;
+  width: 100%;
+  text-align: center;
+
+
+  & .main-icon {
+    overflow: hidden;
+    display: block;
+    align-items: center;
+    margin: 16px auto;
+
+    & img {
+      width: 100%;
+      max-width: 200px;
+      position: relative;
+      left: auto;
+    }
+  }
+
+  & .pre-content {
+    color: $white;
+    display: flex;
+    align-items: center;
+
+    & .content-holder {
+      max-width: 600px;
+    }
+
+    & h4 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+
+  & .action-holder {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: flex-end;
+     flex-grow: 2;
+     padding: 0 24px;
+
+     & .btn {
+       margin: 8px 0;
+       width: 100%;
+     }
+  }
+}
+
+
+.footer-coop {
+  background-color: $white;
+  margin: 24px 0;
+  padding: 0;
+  width: 100%;
+  color: $carbon;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+    & .brand-holder {
+
+      display: block;
+      text-align: left;
+      margin: 16px 0;
+
+      & span {
+        margin: 8px 0 24px;
+        font-weight: 600;
+        font-size: 1rem;
+        display: block;
+
+        & br {
+          display: none;
+        }
+      }
+
+      & .brand-block {
+        display: block;
+        align-items: center;
+        margin: 24px 0;
+
+        & img {
+          width: auto;
+          max-height: 80px;
+          margin: 0;
+          margin-right: 24px;
+        }
+      }
+    }
+  }
+
+  .page-hero {
+    height: auto;
+    padding-top: 80px;
+  }
+
+  .module-title-block {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    padding: 40px 0;
+  
+    & .module-icon {
+      margin-right: 0;
+      & img {
+        width: 140px;
+      }
+    }
+  
+    & span {
+      font-size: 1.5rem;
+      color: $primary;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+  
+    & h3 {
+      font-size: 2rem;
+      color: $carbon;
+      font-weight: 700;
+    }
+  }
+
 
  }
 
