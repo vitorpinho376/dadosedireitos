@@ -541,6 +541,10 @@ a {
       width: 100%;
       padding: 40px 40px 0;
 
+      &.blocked-header {
+        position: relative;
+      }
+
       & .main-logo {
         width: 320px;
         display: block;
@@ -1074,6 +1078,12 @@ footer {
       opacity: .7;
     }
   }
+}
+
+.embed-page {
+  padding-top: 5%;
+  background: $white url(../img/modal-bg.svg) no-repeat fixed;
+  background-position: 0 320px;
 }
 
 .modal-backdrop {
