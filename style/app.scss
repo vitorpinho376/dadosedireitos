@@ -437,20 +437,21 @@ a {
   .arrow-info-block {
     background: $white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
-    border-radius: 8px;
-    border: 4px solid $primary;
-    padding: 24px;
-    padding-top: 80px;
+    border-radius: 4px;
+    border: 1px dashed $primary;
+    padding: 8px;
+    padding-top: 24px;
     margin: 0 0 32px;
 
     & .icon {
-      font-size: 4rem;
+      font-size: 2rem;
       margin-bottom: 16px;
       color: $primary;
     }
 
     & .body {
       margin: 0 !important;
+      font-size: 1rem !important;
     }
   }
 
@@ -843,7 +844,6 @@ a {
 .footer-coop {
   background-color: $white;
   margin: 24px 0;
-  padding: 24px 0 0;
   width: 100%;
   color: $carbon;
   display: flex;
@@ -852,6 +852,7 @@ a {
       flex-wrap: wrap;
       display: flex;
       align-items: center;
+      justify-content: space-between;
 
       & span {
         margin: 0 24px;
@@ -1010,15 +1011,6 @@ footer {
   color: $white;
   padding: 40px 0;
 
-  & .brand-holder {
-    padding: 24px 0;
-
-    & img {
-      width: 100%;
-      max-width: 300px;
-    }
-  }
-
   & .tagline {
     padding: 24px 0;
     max-width: 340px;
@@ -1065,9 +1057,20 @@ footer {
     color: $white;
   }
 
+  & .location {
+    display: block;
+    font-weight: 600;
+    margin-top: 8px;
+  }
+
+  & .license {
+    display: flex;
+    align-items: center;
+  }
+
   & .neutral-link {
     font-size: 0.875rem;
-    margin: 0 24px;
+    margin: 8px;
   }
 
   & .bright-logo {
@@ -2209,7 +2212,7 @@ footer {
 }
 
 .footer-nav {
-  padding: 32px 0;
+  padding: 0;
 
   & a {
     font-size: 1.5rem;
@@ -2234,15 +2237,29 @@ footer {
 .signature-block {
   & span {
     padding: 0;
-    margin: 32px 0;
+    margin: 0;
     font-size: 1rem;
     color: rgba(255,255,255,.5);
   }
 
+    & .location {
+      display: block;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+  
+    & .license {
+      display: block;
+
+      & img {
+        margin-bottom: 24px;
+      }
+    }
+
   & .neutral-link {
     font-size: 1rem;
-    display: block;
-    margin: 24px 0;
+    display: inline;
+    margin: 0;
   }
 
   & .bright-logo {
@@ -2250,8 +2267,6 @@ footer {
     margin-top: 32px;
   }
 }
-
-
 
 
 .footer-coop {
@@ -2288,7 +2303,7 @@ footer {
 
         & img {
           width: auto;
-          max-height: 80px;
+          max-height: 140px;
           margin: 0;
           margin-right: 24px;
         }
