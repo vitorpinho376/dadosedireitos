@@ -34,6 +34,18 @@ iframe {
   display: block;
 }
 
+table {
+  margin: 24px 0;
+  & td {
+    padding: 16px;
+    border: 1px solid $grey;
+
+    &.title-td {
+      font-weight: 600;
+    }
+  }
+}
+
 
 body {
     background-color: $white;
