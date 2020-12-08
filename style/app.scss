@@ -24,6 +24,86 @@ html {
   scroll-behavior: smooth;
 }
 
+//DARK MODE STYLES
+
+body.darkMode {
+  background-color: $carbon !important;
+ 
+  & .modal-dialog nav .primary-link {
+    color: $white;
+  }
+
+  & .icon-light:before {
+    content: "\e90b" !important;
+  }
+
+  & .attached-header {
+    background-color: $carbon;
+
+    & .btn-outline-carbon {
+      border-color: $white;
+      color: $white;
+    }
+  }
+
+  & .modal-content {
+    background-color: $carbon;
+
+    & .modal-header {
+      & .btn-outline-dark {
+        border-color: $white;
+        color: $white;
+      }
+    }
+
+    & .title-holder {
+      color: $white;
+    }
+
+    & label {
+      color: $white;
+    }
+  }
+
+  & .main-hero, & .page-hero, & .neutral-hero {
+    background: rgba(50, 31, 74, .8);
+  }
+
+  & .module-main-content {
+    background-color: $carbon !important;
+
+    & .body {
+      color: $white !important;
+    }
+
+    & .colab-list {
+      color: $white !important;
+    }
+  }
+
+  & .main-content {
+    background-color: $carbon !important;
+    
+    & .module-content {
+      background-color: $carbon !important;
+      color: $white !important;
+ 
+      & .heading {
+        color: $white !important;
+      }
+ 
+      & .tag-btn {
+       color: $white !important;
+       border-bottom: 2px dashed $white;
+     }
+ 
+     & .arrow-info-block {
+       background: transparent;
+     }
+    }
+  }
+}
+
 button:focus {
    outline: 0;
 }
@@ -621,15 +701,8 @@ a {
     width: 100%;
     position: relative;
     display: block;
-
-    & .detail-image {
-      max-width: 100%;
-      position: relative;
-      top: -40px;
-      width: 100%;
-    }
+    padding: 32px 0 0;
   }
-
 
   .main-hero {
       min-height: 100vh;
@@ -1025,7 +1098,7 @@ footer {
   background-position: right;
   background-size: 40%;
   color: $white;
-  padding: 40px 0;
+  padding: 40px 0 24px;
 
   & .tagline {
     padding: 24px 0;
@@ -1082,6 +1155,10 @@ footer {
   & .license {
     display: flex;
     align-items: center;
+
+    & .neutral-link {
+      margin: 0 8px;
+    }
   }
 
   & .neutral-link {
@@ -1955,18 +2032,6 @@ footer {
   margin-bottom: 24px;
 }
 
-
-
-// MEDIA QUERIES
-
-body.darkmode {
-
-  & .main-content {
-    color: $white !important;
-    background-color: $carbon !important;
-  }
-
-}
 
 // Large devices (desktops, 992px and up)
 @media (max-width: 1200px) {

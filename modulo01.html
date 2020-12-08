@@ -59,7 +59,7 @@
           <div class="col">
             <div class="action-holder justify-content-end">
               <!-- <a href="guia-de-acessibilidade.html" class="btn md btn-outline extra-nav"><i class="icon icon-guia"></i></a> -->
-              <button href="#" class="btn md btn-outline extra-nav"><i class="icon icon-light"></i></button>
+              <button onclick="darkMode();" class="btn md btn-outline extra-nav"><i class="icon icon-light"></i></button>
               <button class="btn md btn-outline" data-toggle="modal" data-target="#menuModal">Menu <i class="icon icon-menu left"></i></button>
             </div>
           </div>
@@ -162,7 +162,7 @@
       </div>
 
       <div class="col-md-12"  data-aos="fade-up">
-        <p class="body md">Essas vantagens se tornaram importantes inclusive no momento de isolamento físico imposto pela pandemia da covid-19. Além de ser um dos principais meios para comunicação entre familiares e amigos, a internet tornou-se um grande canal para o ensino, reunindo estudantes e professores em um contexto de incertezas e distanciamento. Inspirado pelos acontecimentos deste período complexo e sem precedentes na educação, o conteúdo deste guia visa a fomentar uma internet livre e segura.</p>
+        <p class="body md">Essas vantagens se tornaram importantes <a class="primary-link" href="https://lunetas.com.br/uma-educacao-para-que-e-pra-quem/" target="_blank">inclusive no momento de isolamento físico</a> imposto pela pandemia da covid-19. Além de ser um dos principais meios para comunicação entre familiares e amigos, a internet tornou-se um grande canal para o ensino, reunindo estudantes e professores em um contexto de incertezas e distanciamento. Inspirado pelos acontecimentos deste período complexo e sem precedentes na educação, o conteúdo deste guia visa a fomentar uma internet livre e segura.</p>
       </div>
 
     </div>
@@ -385,7 +385,7 @@
             <form>
               <div class="form-group">
                 <label for="exampleInputEmail1">Copie e cole</label>
-                <input type="text" class="form-control disabled" id="urlfield" aria-describedby="emailHelp" value="https://dadosestudantis.org.br/">
+                <input type="text" class="form-control disabled" id="urlfield" aria-describedby="emailHelp" value="https://bit.ly/envieoguia">
               </div>
               <button class="btn lg btn-secondary" onclick="copyToClip();">Copiar Link</button>
             </form>
@@ -623,9 +623,9 @@
     </div>
   </div>
 
-  <!-- Menu Modal -->
+   <!-- Menu Modal -->
 
-  <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+   <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content custom-bg">
         <div class="modal-header">
@@ -633,7 +633,7 @@
             <button type="button" class="btn md btn-outline-dark" data-dismiss="modal" aria-label="Close">
               <i class="icon icon-close"></i> Fechar
             </button>
-            <button type="button" class="btn md btn-outline-dark" data-dismiss="modal" aria-label="Close">
+            <button type="button" onclick="darkMode();" class="btn md btn-outline-dark">
               <i class="icon icon-light"></i>
             </button>
           </div>

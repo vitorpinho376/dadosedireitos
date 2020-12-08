@@ -58,7 +58,7 @@
         <div class="col">
           <div class="action-holder justify-content-end">
             <!-- <a href="guia-de-acessibilidade.html" class="btn md btn-outline extra-nav"><i class="icon icon-guia"></i></a> -->
-            <button href="#" class="btn md btn-outline extra-nav"><i class="icon icon-light"></i></button>
+            <button onclick="darkMode();" class="btn md btn-outline extra-nav"><i class="icon icon-light"></i></button>
             <button class="btn md btn-outline" data-toggle="modal" data-target="#menuModal">Menu <i class="icon icon-menu left"></i></button>
           </div>
         </div>
@@ -160,20 +160,12 @@
             <p class="body md">Chamamos de <button class="tag-btn" data-toggle="modal" data-target="#glossarioDadoses">dados pessoais estudantis</button> todas as informações que identificam cada estudante e cuja coleta e uso estejam relacionados à sua vida escolar.</p>
             <p class="body md">Mesmo antes de iniciar os primeiros anos escolares, dados pessoais da criança são compartilhados com instituições de ensino para fins de registro e reserva de vagas. Nome, endereço, dados sobre sua saúde (como alergias, doenças crônicas e tipo sanguíneo), gênero, raça e etnia, fotografia e impressão digital são apenas alguns exemplos do que é fornecido aos colégios. Também serão compartilhadas com as escolas informações sobre as mães, os pais e os responsáveis pelas crianças e adolescentes, que vão desde o contato até características socioeconômicas.</p>
           </div>
-          <div class="col-md-12">
+          <div class="col-md-12"  data-aos="fade-up">
             <p class="body md">Conforme os anos se passam, os dados vão se acumulando e o banco onde eles são armazenados passa a ser alimentado com novas informações sobre cada estudante - por exemplo, o seu desempenho escolar, inteligência emocional e mesmo eventuais advertências disciplinares.</p>
+            <p class="body md">A partir da inserção de tecnologias na rotina escolar e de ensino, novos dados estudantis entram em jogo. A instalação de câmeras e sensores em ambientes de aprendizagem, por exemplo, permite a captação de imagens biométricas, ou seja, das faces de toda a comunidade escolar - que são consideradas <button class="tag-btn" data-toggle="modal" data-target="#glossarioDadossen">dados sensíveis</button>, e que também vão compor o complexo acervo de dados estudantis.</p>
+            <p class="body md">Quando tratamos do ensino remoto e do ensino a distância, tão presentes no contexto da pandemia, o acúmulo de informações pessoais de estudantes se torna ainda mais significativo. A conta do e-mail e da rede social, o login e a senha de acesso à plataforma de ensino são exemplos de dados pessoais estudantis. Ainda, a depender do processo, os sites acessados por aquele aluno, arquivos e mensagens que ele envia a outras pessoas, o tempo de visualização que ele passa em cada página da internet, o trajeto da navegação, o clique do mouse e a curtida que deixa em determinados conteúdos, também podem ser instrumentalizados por essa lógica mercantil perversa.</p>
           </div>
         </div>
-
-        <!-- Module Row -->
-
-        <div class="row align-items-center">
-          <!-- Section Content -->
-        <div class="col-md-12"  data-aos="fade-up">
-          <p class="body md">A partir da inserção de tecnologias na rotina escolar e de ensino, novos dados estudantis entram em jogo. A instalação de câmeras e sensores em ambientes de aprendizagem, por exemplo, permite a captação de imagens biométricas, ou seja, das faces de toda a comunidade escolar - que são consideradas <button class="tag-btn" data-toggle="modal" data-target="#glossarioDadossen">dados sensíveis</button>, e que também vão compor o complexo acervo de dados estudantis.</p>
-          <p class="body md">Quando tratamos do ensino remoto e do ensino a distância, tão presentes no contexto da pandemia, o acúmulo de informações pessoais de estudantes se torna ainda mais significativo. A conta do e-mail e da rede social, o login e a senha de acesso à plataforma de ensino são exemplos de dados pessoais estudantis. Ainda, a depender do processo, os sites acessados por aquele aluno, arquivos e mensagens que ele envia a outras pessoas, o tempo de visualização que ele passa em cada página da internet, o trajeto da navegação, o clique do mouse e a curtida que deixa em determinados conteúdos, também podem ser instrumentalizados por essa lógica mercantil perversa.</p>
-        </div>
-      </div>
 
       <!-- Module Row -->
 
@@ -192,17 +184,9 @@
         </div>
         <div class="col-md-12">
           <p class="body md">Além disso, pensando no cenário do ensino público, o conjunto de dados estudantis pode ser muito importante para recenseamento e formulação de políticas públicas em educação, identificação de situações de vulnerabilidade e violência, além da elaboração de projetos político-pedagógicos, que devem ser desenhados a partir do perfil de cada comunidade escolar. Quando falamos em dados pessoais estudantis e na importância de protegê-los, não estamos falando que eles devem, em toda e qualquer situação, estar escondidos e trancados a sete chaves.</p>
+          <p class="body md">Mas você se lembra que, quando falamos sobre o rastro digital, o uso da internet e das tecnologias, explicamos que existem princípios éticos e diretrizes para garantir a preservação de direitos em relação a dados pessoais? Pois isso se aplica de forma especial aos dados pessoais estudantis e aos dados de crianças e adolescentes.</p>
         </div>
       </div>
-
-       <!-- Module Row -->
-
-       <div class="row align-items-center">
-        <!-- Section Content -->
-      <div class="col-md-12"  data-aos="fade-up">
-        <p class="body md">Mas você se lembra que, quando falamos sobre o rastro digital, o uso da internet e das tecnologias, explicamos que existem princípios éticos e diretrizes para garantir a preservação de direitos em relação a dados pessoais? Pois isso se aplica de forma especial aos dados pessoais estudantis e aos dados de crianças e adolescentes.</p>
-      </div>
-    </div>
 
     <!-- Module Row -->
 
@@ -376,7 +360,7 @@
             <form>
               <div class="form-group">
                 <label for="exampleInputEmail1">Copie e cole</label>
-                <input type="text" class="form-control disabled" id="urlfield" aria-describedby="emailHelp" value="https://dadosestudantis.org.br/">
+                <input type="text" class="form-control disabled" id="urlfield" aria-describedby="emailHelp" value="https://bit.ly/envieoguia">
               </div>
               <button class="btn lg btn-secondary" onclick="copyToClip();">Copiar Link</button>
             </form>
@@ -614,9 +598,9 @@
     </div>
   </div>
 
-  <!-- Menu Modal -->
+   <!-- Menu Modal -->
 
-  <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+   <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content custom-bg">
         <div class="modal-header">
@@ -624,7 +608,7 @@
             <button type="button" class="btn md btn-outline-dark" data-dismiss="modal" aria-label="Close">
               <i class="icon icon-close"></i> Fechar
             </button>
-            <button type="button" class="btn md btn-outline-dark" data-dismiss="modal" aria-label="Close">
+            <button type="button" onclick="darkMode();" class="btn md btn-outline-dark">
               <i class="icon icon-light"></i>
             </button>
           </div>

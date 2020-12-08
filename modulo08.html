@@ -45,51 +45,51 @@
   </head>
   <body>
 
-   <!-- Module Main Header -->
+    <!-- Module Main Header -->
 
-   <header class="neutral-header">
-    <div class="container-fluid">
-      <div class="row align-items-center">
-        <div class="col desktop">
-          <button class="btn md btn-outline extra-nav" data-toggle="modal" data-target="#modulesModal"><i class="icon right icon-grid"></i> Módulos</button>
-        </div>
-        <div class="col">
-          <a class="centered-logo" href="index.html"><img alt="Logo de A Escola no Mundo Digital - Dados e direitos de estudantes" class="mob-logo" src="img/mob-logo.png" /></a>
-        </div>
-        <div class="col">
-          <div class="action-holder justify-content-end">
-            <!-- <a href="guia-de-acessibilidade.html" class="btn md btn-outline extra-nav"><i class="icon icon-guia"></i></a> -->
-            <button href="#" class="btn md btn-outline extra-nav"><i class="icon icon-light"></i></button>
-            <button class="btn md btn-outline" data-toggle="modal" data-target="#menuModal">Menu <i class="icon icon-menu left"></i></button>
+    <header class="neutral-header">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col desktop">
+            <button class="btn md btn-outline extra-nav" data-toggle="modal" data-target="#modulesModal"><i class="icon right icon-grid"></i> Módulos</button>
+          </div>
+          <div class="col">
+            <a class="centered-logo" href="index.html"><img alt="Logo de A Escola no Mundo Digital - Dados e direitos de estudantes" class="mob-logo" src="img/mob-logo.png" /></a>
+          </div>
+          <div class="col">
+            <div class="action-holder justify-content-end">
+              <!-- <a href="guia-de-acessibilidade.html" class="btn md btn-outline extra-nav"><i class="icon icon-guia"></i></a> -->
+              <button onclick="darkMode();" class="btn md btn-outline extra-nav"><i class="icon icon-light"></i></button>
+              <button class="btn md btn-outline" data-toggle="modal" data-target="#menuModal">Menu <i class="icon icon-menu left"></i></button>
+            </div>
           </div>
         </div>
-      </div>
-    </div> 
-  </header>
+      </div> 
+    </header>
 
 
- 
-  <!-- Module Main Header -->
+   
+    <!-- Module Main Header -->
 
-  <div class="attached-header hidden">
-    <div class="container-fluid">
-      <div class="row align-items-center">
-        <div class="col desktop">
-          <button class="btn md btn-outline-carbon extra-nav" data-toggle="modal" data-target="#modulesModal"><i class="icon right icon-grid"></i> Módulos</button>
-        </div>
-        <div class="col">
-          <a class="centered-logo" href="index.html"><img alt="Logo de A Escola no Mundo Digital - Dados e direitos de estudantes" class="mob-logo" src="img/mob-logo.png" /></a>
-        </div>
-        <div class="col">
-          <div class="action-holder justify-content-end">
-          <!--  <a href="guia-de-acessibilidade.html" class="btn md btn-outline-carbon extra-nav"><i class="icon icon-guia"></i></a> -->
-            <button onclick="darkMode();" class="btn md btn-outline-carbon extra-nav"><i class="icon icon-light"></i></button>
-            <button href="#" class="btn md btn-outline-carbon" data-toggle="modal" data-target="#menuModal">Menu <i class="icon icon-menu left"></i></button>
+    <div class="attached-header hidden">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col desktop">
+            <button class="btn md btn-outline-carbon extra-nav" data-toggle="modal" data-target="#modulesModal"><i class="icon right icon-grid"></i> Módulos</button>
+          </div>
+          <div class="col">
+            <a class="centered-logo" href="index.html"><img alt="Logo de A Escola no Mundo Digital - Dados e direitos de estudantes" class="mob-logo" src="img/mob-logo.png" /></a>
+          </div>
+          <div class="col">
+            <div class="action-holder justify-content-end">
+            <!--  <a href="guia-de-acessibilidade.html" class="btn md btn-outline-carbon extra-nav"><i class="icon icon-guia"></i></a> -->
+              <button onclick="darkMode();" class="btn md btn-outline-carbon extra-nav"><i class="icon icon-light"></i></button>
+              <button href="#" class="btn md btn-outline-carbon" data-toggle="modal" data-target="#menuModal">Menu <i class="icon icon-menu left"></i></button>
+            </div>
           </div>
         </div>
-      </div>
-    </div> 
-  </div>
+      </div> 
+    </div>
    
     <!-- Main Hero -->
 
@@ -322,7 +322,7 @@
           <form>
             <div class="form-group">
               <label for="exampleInputEmail1">Copie e cole</label>
-              <input type="text" class="form-control disabled" id="urlfield" aria-describedby="emailHelp" value="https://dadosestudantis.org.br/">
+              <input type="text" class="form-control disabled" id="urlfield" aria-describedby="emailHelp" value="https://bit.ly/envieoguia">
             </div>
             <button class="btn lg btn-secondary" onclick="copyToClip();">Copiar Link</button>
           </form>
@@ -560,9 +560,9 @@
   </div>
 </div>
 
-<!-- Menu Modal -->
+ <!-- Menu Modal -->
 
-<div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+ <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content custom-bg">
       <div class="modal-header">
@@ -570,7 +570,7 @@
           <button type="button" class="btn md btn-outline-dark" data-dismiss="modal" aria-label="Close">
             <i class="icon icon-close"></i> Fechar
           </button>
-          <button type="button" class="btn md btn-outline-dark" data-dismiss="modal" aria-label="Close">
+          <button type="button" onclick="darkMode();" class="btn md btn-outline-dark">
             <i class="icon icon-light"></i>
           </button>
         </div>
