@@ -28,6 +28,62 @@ html {
 
 body.darkMode {
   background-color: $carbon !important;
+
+  & .politics {
+    color: $white !important; 
+  }
+
+  & .glossario-item {
+    background: transparent;
+    color: $white !important; 
+  }
+
+  & .neutral-heading, & .featured-heading, & .bullet-line {
+    color: $white !important;
+  }
+
+  & .bullet-accordion-block {
+    background: transparent;
+    color: $white !important;
+
+    & .neutral-heading, & .featured-heading, & .bullet-line {
+      color: $white !important;
+    }
+  }
+
+  & .arrow-info-block {
+    background: transparent;
+  }
+  & .tag-btn {
+    color: $white !important;
+    border-bottom: 2px dashed $white;
+  }
+
+  & .law-block {
+    background-color: $carbon;
+  }
+
+  .module-main-content {
+    & .module-content {
+      background-color: $carbon;
+    }
+  }
+
+  & .bulleted-card { 
+    background-color: $carbon;
+    color: $white;
+    & .arrow-info-block {
+      background: transparent;
+    }
+    & .tag-btn {
+      color: $white !important;
+      border-bottom: 2px dashed $white;
+    }
+
+    & .featured-heading {
+      color: $white;
+    }
+  }
  
   & .modal-dialog nav .primary-link {
     color: $white;
